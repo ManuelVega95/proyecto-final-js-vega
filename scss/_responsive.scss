@@ -1,0 +1,76 @@
+@media screen and (max-width: 460px) {
+    .cajaClubes{
+        width: 100vw;
+        height: 700px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: 
+            "Alumni AtleticoDelRosario" 
+            "Belgrano BuenosAires"
+            "Champagnat CUBA"
+            "CASI Hindu"
+            "Newman Regatas"
+            "SIC SanLuis";
+    }
+}
+@media screen and (max-width: 570px) {
+    .cajaClubes{
+        width: 80vw;
+        height: 440px;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+            "Alumni AtleticoDelRosario Belgrano" 
+            "BuenosAires Champagnat CUBA"
+            "CASI Hindu Newman"
+            "Regatas SIC SanLuis";
+    }
+}
+@media screen and (max-width: 768px) {
+    .cajaClubes{
+        width: 60vw;
+        height: 400px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "Alumni AtleticoDelRosario Belgrano BuenosAires"
+            "Champagnat CUBA CASI Hindu"
+            "Newman Regatas SIC SanLuis";
+    }
+}
+@media screen and (min-width: 769px) {
+    .cajaClubes{
+        width: 90%;
+        height: auto;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "Alumni AtleticoDelRosario Belgrano BuenosAires Champagnat CUBA"
+            "CASI Hindu Newman Regatas SIC SanLuis";
+    }
+}
+
+/* Responsive para las Cards de la Página Productos */
+
+@media (max-width: 768px) {
+    .card {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 200px;
+    }
+}
+
+/* Responsive para el Bootstrap Grid de la página Nosotros. */ 
+@media (max-width: 768px) {
+    .col-4 h2 {
+        font-size: 1.5rem;
+    }
+    .col-4 p {
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+}

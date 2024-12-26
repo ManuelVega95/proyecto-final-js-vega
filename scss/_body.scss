@@ -1,0 +1,84 @@
+/* Body */
+body{
+    background-color: $fondo;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    /* Textos generales */
+    div{
+        .logo{ /* logo de la página, que al clickear te lleva al inicio. En todas las páginas, está también al pie de la página para redireccionar al Home */
+            border-radius: 20%;
+            width: 200px;
+            padding: 10px;
+            justify-content: center;
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+    h1{/* Título principal de la página */
+        color: $tituloPrincipal;
+        text-align: center;
+        padding: 10px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-style: normal;
+        font-size: 70px;
+        @media screen and (max-width: 570px) {
+            font-size: 50px;
+        }
+        @media screen and (max-width: 460px) {
+            font-size: 40px;
+        }
+    }
+    h2{/* Títulos secundarios de la página */
+        color: $texth2;
+        text-align: center;
+        padding: 10px;
+        font-weight:  bold;
+    }
+    h3{/* Texto del footer */
+        text-align: center;
+        color: $texth3;
+        @media screen and (max-width: 570px) {
+            font-size: 12px;
+            width: auto;
+            flex-direction: column;
+        }
+        @media screen and (max-width: 460px) {
+            font-size: 10px;
+            width: auto;
+            flex-direction: column;
+        }
+    }
+    h4{/* Breve descripción del sitio en el header */
+        text-align: center;
+        font-family:'Courier New', Courier, monospace;
+        font-size: 30px;
+        padding: 10px;
+        color: $textNav;
+        font-weight: bold;
+        @media screen and (max-width: 570px) {
+            font-size: 15px;
+            width: auto;
+            flex-direction: column;
+        }
+        @media screen and (max-width: 460px) {
+            font-size: 12px;
+            width: auto;
+            flex-direction: column;
+        }
+    }
+    p{
+        padding: 10px;
+        line-height: 2;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 20px;
+    }
+}
+.detalle-venta {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    margin: 20px;
+    text-align: left;
+    line-height: 1.5;
+  }

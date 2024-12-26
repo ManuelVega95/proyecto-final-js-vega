@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Agregar favicon--->
+    <link rel="shortcut icon" href="./fotos/favicon.ico" type="image/x-icon">
+    <!--Link para utilizar el css--->
+    <link rel="stylesheet" href="./css/estilo.css">
+    <!--Link a librería --->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!--Título del sitio + página --->
+    <title>URBAnizados - Inicio</title>
+    <!--Descripción del sitio --->
+    <meta name="description=" content="Página de URBAnizados, programa radial del rugby nacional e internacional, además de otros deportes">
+    <!--Palabras claves del sitio --->
+    <meta name="keywords=" content="RUGBY, RADIO, URBANIZADOS, URBA, DEPORTE, NOTICIAS">
+</head>
+<body>
+    <!--Audio simple con la intro del programa, espero que no sea una molestia por el peso. No le pongo autoplay para que no resulte pesado al cargar el Home-->
+    <audio controls> 
+        <source class="audio" src="./audio/INTRO - In my World - ROOKiEZ is PUNK'D.mp3" type="audio/mpeg">
+    </audio>
+    <!--Barra de Navegación-->
+    <header>
+        <div class="top">
+            <h1 class="animate__animated animate__backInDown">URBAnizados</h1>
+            <a href="./index.html">
+                <img class="logo" src="./fotos/Logo-2021-3.webp" alt="homeLogo">
+            </a>
+            <h4>
+                Toda la información del rugby nacional e internacional
+            </h4> 
+        </div>
+        <div>
+            <nav class="navHeader">
+                <a href="./index.html">
+                    <img class="logoNav" src="./fotos/Pelota-Rugby-Urba.webp" alt="logoNav">
+                </a>
+                <label class="label_hamburguesa" for="menu_hamburguesa">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="30"  
+                    height="40" 
+                    fill="currentColor" 
+                    class="list_icon" 
+                    viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </label> 
+                <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+                <ul class="ul_links">
+                    <li class="li_links"> <a href="./index.html" class="link">Home</a></li>
+                    <li> <a href="./pages/nosotros.html" class="link">Nosotros</a></li>
+                    <li> <a href="./pages/noticias.html" class="link">Noticias</a></li>
+                    <li> <a href="./pages/urba.html" class="link">URBA</a></li>
+                    <li> <a href="./pages/productos.html" class="link">Productos</a></li>
+                    <li> <a href="./carrito.html" class="link"><img class="logo-carrito" src="./fotos/Logo-carrito.png" alt="Logo carrito de compras"></a></li>
+                    <li> <a href="./pages/contacto.html" class="link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+	</header>
+    <!--Main--->
+    <main class="main">
+        <!--Foto principal Index--->
+        <div class="fotoIndexPrincipal">
+            <img src="./fotos/Rugby.webp" alt="Rugby">
+        </div>
+
+        <section class="cardProductosCentrados">
+            <h2>CONOCÉ NUESTROS PRODUCTOS</h2>
+            <div class="card">
+                <h2 class="card__productos">CAMISETA DE "LOS PUMAS"</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__img src="./fotos/Camiseta-pumas-2024-2.png" alt="Camiseta Pumas 2024">
+                <p class="card__description"> <span class="bold">PRECIO: </span> <span class="italic">$125.000</span> 
+                </div>
+            </div>
+
+            </div>
+            <div class="card">
+                <h2 class="card__productos">SHORT DE "LOS PUMAS"</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__img src="./fotos/Short-Pumas.jpg" alt="Short de Los Pumas">
+                <p class="card__description"> <span class="bold">PRECIO: </span> <span class="italic">$69.000</span> 
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card__productos">PELOTA RUGBY URBA 2024</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__img src="./fotos/URBA-pelota.jpg" alt="Pelota rugby URBA 2024">
+                <p class="card__description"> <span class="bold">PRECIO: </span> <span class="italic">$105.000</span> 
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card__productos">BOTINES DE RUGBY ORIGINALES</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__img src="./fotos/Botines-rugby-adidas-negros.jpg" alt="Botines de rugby negros adidas">
+                <p class="card__description"> <span class="bold">PRECIO: </span> <span class="italic">$180.000</span>
+                </div>
+            </div>
+
+        <p>Para encontrar todos nuestros productos, ingresá <a href="./pages/productos.html">acá</a> </p>
+        </section>
+
+        <!--Última fecha disputada del Top 12 de la URBA (en este caso, la final del torneo) - Misma tabla que en la página URBA-->
+        <h2>ÚLTIMOS RESULTADOS: FINAL - 26 Octubre 2024</h2>
+        <table>
+            <tbody>
+                <tr class="tablaGris">
+                    <td><img class="logoTabla" src="../fotos/Belgrano.webp" alt="Belgrano Athletic"></td>
+                    <td>Belgrano Athletic</td>
+                    <td>17 - <span class="bold">20</span></td>
+                    <td><span class="bold">ALUMNI (CAMPEÓN)</span></td>
+                    <td><img class="logoTabla" src="../fotos/Alumni.webp" alt="Alumni"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="puestosTabla"><span class="bold">Campeón del URBA Top 12 2024: <img class="logoCampeon" src="../fotos/Alumni.webp" alt="Alumni">ALUMNI</span> (7° título URBA)</p>
+            <!--Quiénes somos-->
+            <h2>¿QUIÉNES SOMOS?</h2>
+            <p>Somos un grupo de amigos que empezamos un programa de radio en 2016, enfocándonos en el rugby  nacional e internacional, entre otros deportes. Podés escucharnos los sábados de 13 a 14 horas.</p>
+        </section>
+        <section class="urbaTitulo">
+            <h2>IR AL SITIO WEB OFICIAL DE LA URBA:</h2>
+            <div class="urba">
+                <a href="https://www.urba.org.ar/" target="_blank"><img src="./fotos/Urba-2.webp" class="urbaLogo" alt="URBA"></a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <!--Footer-->
+        <h3>Contactanos al 011******  <img class = "logoRedes" src="./fotos/wsp.webp" alt="wsp"> </h3>
+        <h3>O podés enviándonos un mail a urbanizados@hotmail.com</h3>
+        <h3>Seguinos en nuestras redes sociales:
+            <div class="redesSociales">
+                <img class="logoRedes" src="./fotos/tw.webp" alt="Twitter"> <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <img class="logoRedes" src="./fotos/face.webp" alt="Facebook"> <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <img class="logoRedes" src="./fotos/ig.webp" alt="Instagram"> <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <img class="logoRedes" src="./fotos/yt.webp" alt="YouTube"> <a href="https://www.youtube.com" target="_blank">Youtube</a>
+            </div>
+        </h3>
+        <nav class="navFooter">
+            <ul>
+                <li> <a href="./index.html">Home</a></li>
+                <li> <a href="./pages/nosotros.html">Nosotros</a></li>
+                <li> <a href="./pages/noticias.html">Noticias</a></li>
+                <li> <a href="./pages/urba.html">URBA</a></li>
+                <li> <a href="./pages/productos.html">Productos</a></li>
+                <li> <a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="./index.html">
+                <img class="logo" src="./fotos/Logo-2021-3.webp" alt="homeLogo">
+            </a> 
+        </div>
+    </footer>
+</body>
+</html>

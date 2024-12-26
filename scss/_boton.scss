@@ -1,0 +1,115 @@
+/* Formato del botón para agregar al carrito */
+.agregar-al-carrito {
+    background-color: $color-principal;
+    color: $color-texto;
+    border: none;
+    border-radius: $radio-borde;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color $transicion-duracion, transform $transicion-duracion;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    gap: 10px;
+    border: black 1px solid;
+    &:hover {
+        background-color: $color-hover;
+        color: $color-texto-hover;
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 10px rgba($color-principal, 0.5);
+    }
+    @media (max-width: 600px) {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+  .icono-carrito {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    fill: white;
+}
+
+// Diseño para los talles de los productos
+.titulo-talle {
+    font-family: 'Arial', sans-serif;
+    font-size: 6px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 2px 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 5px;
+    &:hover {
+      background-color: $fondo-talle;
+      color: white;
+      transform: translateY(-2px);
+    }
+}
+
+.talle-selector {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 8px 12px;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px;
+    &:hover {
+      background-color: $fondo-talle;
+      transform: scale(1.05);
+      color: white;
+    }
+    .opcion {
+      padding: 5px 10px;
+      text-align: center;
+      border-radius: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      &:hover {
+        background-color: navy;
+        color: white;
+        }
+      &.selected {
+        background-color: navy;
+        color: white;
+        }
+    }
+}
+// Para los pagos con tarjeta
+.aclaracion-pago {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .aclaracion-pago strong {
+    font-weight: bold;
+  }

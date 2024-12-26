@@ -1,0 +1,185 @@
+/* Header */
+header{
+    background-color: $barraNav;
+    color: $textNav;
+    height: auto;
+    display: grid;
+    .top{
+        background-color: $fondo;
+        .logo{ /* logo de la página, que al apretarlo te lleva al inicio */
+            border-radius: 20%;
+            width: 300px;
+            padding: 10px;
+            justify-content: center;
+            display: flex; 
+            margin: 0 auto;
+            @media screen and (max-width: 768px) {
+                width: 300px;
+                flex-direction: column;
+            }
+            @media screen and (max-width: 570px) {
+                width: 270px;
+                flex-direction: column;
+            }
+            @media screen and (max-width: 460px) {
+                width: 250px;
+                flex-direction: column;
+            }
+        }
+    }
+    /*Barra de navegación principal con menú hamburguesa en responsive*/
+    .navHeader{
+        height: 130px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 0;
+        .list_icon{
+            color: $textNav;
+            cursor: pointer;
+            width: "30";
+            height: "40"; 
+        }
+        .logoNav{
+            width: 110px;
+            height: 100px;
+            /* Responsive para la barra de navegación del footer */
+            @media screen and (max-width: 768px) {
+                width: 95px;
+                height: 85px;
+            }
+            @media screen and (max-width: 570px) {
+                width: 80px;
+                height: 70px;
+            }  
+            @media screen and (max-width: 460px) {
+                width: 65px;
+                height: 55px;
+            }  
+        }
+        a{
+            text-decoration: none;
+        }
+        ol, ul{
+            list-style: none;
+        }
+        .menu_hamburguesa{
+            display: none;
+        }
+        .menu_hamburguesa:checked + .ul_links{
+            height: 100px;
+        }
+        .ul_links{
+            width: 100%;
+            position: absolute; 
+            top: auto;
+            left: 0;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0,5rem ;
+            height: 0;
+            overflow: hidden;
+            transition: all  .3s;
+            .link{
+                font-size: auto;
+                color: $textNav;
+                font-weight: bold;
+                &:hover{
+                    color: $hoverNav;
+                    transition: all 0,5s;
+                }
+            }
+        }
+        @media (min-width: 768px){
+            .label_hamburguesa{
+                display: none;
+                transition: all .3s;
+            }
+            .ul_links{
+                position: static;
+                width: auto;
+                height: auto;
+                flex-direction: row;
+                gap: 2rem;
+            }
+            .link{
+                font-size: 1.2rem;
+                transition: all .3s;
+                padding: .2rem .7rem ;
+                &:hover{
+                    color: $hoverNav;
+                    transition: all 0,5s;
+                }
+            }
+        }
+    }
+
+
+    /*Barra de navegación del footer, usada anteriormente en el header también*/
+    .barraNav{
+        color: $textNav;
+        list-style-type: none;
+        padding: 10px;
+        margin: 25px auto;
+        height: 40px;
+        text-align: center;
+        border: $barraNav;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        .logoNav{ /* logo de la barra de navegación */
+            border-radius: 20%;
+            width: 50px;
+            text-align: left;
+        }
+        ul{ /* le saqué el diseño predeterminado a las listas del menú*/
+            list-style-type: none;
+        }
+        li{
+            display: inline-block;
+            text-align: center;
+            a{
+                padding:20px;
+                margin: 10px;
+                text-decoration: none;
+                color: $textNav;
+                text-align: center;
+                &:hover{
+                    color: $hoverNav;
+                    font-style: italic;
+                    transition: all 0,5s;
+                }
+            }
+        }
+    }
+    
+.logo-carrito { // para la barra de navegación
+    height: 25px;
+}
+
+    /* Responsive para la barra de navegación del footer */
+    @media screen and (max-width: 768px) {
+          .barraNav{
+            width: auto;
+            flex-direction: column;
+        }  
+    }
+    @media screen and (max-width: 570px) {
+        .barraNav{
+          width: auto;
+          flex-direction: column;
+        }  
+    }
+    @media screen and (max-width: 460px) {
+        .barraNav{
+          width: auto;
+          flex-direction: column;
+        }  
+    }
+}

@@ -1,0 +1,93 @@
+/* footer general --texto, logos (wsp, youtube, twitter, facebook, instagram - para esta entrega creé una clase única para todos los logos) y el responsive para cada página + hover en logos */
+footer {
+    background-color: $footer;
+    text-align: center;
+    h3{
+        color: white;
+    }
+    a{
+        text-decoration: none;
+        margin: 15px;
+        color: red;
+        &:hover{
+            color:$hoverNav;
+            font-style: italic;
+        }
+    }
+    .logoRedes{
+        border-radius: 50%;
+        width: 25px;
+        opacity: .4;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    .redesSociales{
+        text-align: center;
+    }
+    .navFooter{/* barra de navegación que está en el footer de cada página*/
+        padding: 10px;
+        margin: 25px auto;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        ul{ /* le saqué el diseño predeterminado a las listas del menú*/
+            list-style-type: none;
+        }
+        li{
+            display: inline-block;
+            text-align: center;
+            a{
+                padding:20px;
+                margin: 10px;
+                text-decoration: none;
+                list-style-type: none;
+                color: white;
+                text-align: center;
+                &:hover{
+                    color: $hoverNav;
+                    font-style: italic;
+                    transition: all 0,5s;
+                }
+            }
+        }
+    }
+    /* Responsive para achicar las imágenes y texto del Footer */
+    @media (max-width: 576px) {
+        .logoRedes {
+            width: 15px;
+        }
+        footer{
+            font-size: small;
+        }
+    }
+    @media (max-width: 768px) {
+        .logoRedes {
+            width: 20px;
+        }
+        footer{
+            font-size: medium;
+        }
+    }
+    /* Responsive para la barra de navegación */
+    @media screen and (max-width: 768px) {
+        .barraNav{
+            width: auto;
+            flex-direction: column;
+        }  
+    }
+    @media screen and (max-width: 570px) {
+        .barraNav{
+        width: auto;
+        flex-direction: column;
+        }  
+    }
+    @media screen and (max-width: 460px) {
+        .barraNav{
+        width: auto;
+        flex-direction: column;
+        }  
+    }
+}

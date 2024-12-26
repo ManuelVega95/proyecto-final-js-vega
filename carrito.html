@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Agregar favicon--->
+    <link rel="shortcut icon" href="./fotos/favicon.ico" type="image/x-icon">
+    <!--Link para utilizar el css--->
+    <link rel="stylesheet" href="./css/estilo.css">
+    <!--Link a librería --->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--Título del sitio + página --->
+    <title>URBAnizados | Carrito</title>
+    <!--Descripción del sitio --->
+    <meta name="description=" content="Página de URBAnizados, programa radial del rugby nacional e internacional, además de otros deportes">
+    <!--Palabras claves del sitio --->
+    <meta name="keywords=" content="RUGBY, RADIO, URBANIZADOS, URBA, DEPORTE, NOTICIAS">
+</head>
+<body>
+        <!--Barra de Navegación-->
+    <header>
+        <div class="top">
+            <h1 class="animate__animated animate__backInDown">URBAnizados</h1>
+            <a href="./index.html">
+                <img class="logo" src="./fotos/Logo-2021-3.webp" alt="homeLogo">
+            </a>
+            <h4>
+                Toda la información del rugby nacional e internacional
+            </h4> 
+        </div>
+        <div>
+            <nav class="navHeader">
+                <a href="./index.html">
+                    <img class="logoNav" src="./fotos/Pelota-Rugby-Urba.webp" alt="logoNav">
+                </a>
+                <label class="label_hamburguesa" for="menu_hamburguesa">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="30"  
+                    height="40" 
+                    fill="currentColor" 
+                    class="list_icon" 
+                    viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </label> 
+                <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+                <ul class="ul_links">
+                    <li class="li_links"> <a href="./index.html" class="link">Home</a></li>
+                    <li> <a href="./pages/nosotros.html" class="link">Nosotros</a></li>
+                    <li> <a href="./pages/noticias.html" class="link">Noticias</a></li>
+                    <li> <a href="./pages/urba.html" class="link">URBA</a></li>
+                    <li> <a href="./pages/productos.html" class="link">Productos</a></li>
+                    <li> <a href="./carrito.html" class="link"><img class="logo-carrito" src="./fotos/Logo-carrito.png" alt="Logo carrito de compras"></a></li>
+                    <li> <a href="./pages/contacto.html" class="link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h2>CARRITO DE COMPRAS</h2>
+    <button onclick="location.href='pages/productos.html'">Volver a los productos</button>
+    <div id="carrito">
+        <h2>Productos en el carrito</h2>
+    </div>
+    <button id="confirmar-compra">Ir a pagar</button>
+    <footer class="footer">
+    <!--Footer-->
+        <h3>Contactanos al 011******  <img class = "logoRedes" src="./fotos/wsp.webp" alt="wsp"> </h3>
+        <h3>O podés enviándonos un mail a urbanizados@hotmail.com</h3>
+        <h3>Seguinos en nuestras redes sociales:
+            <div class="redesSociales">
+                <img class="logoRedes" src="./fotos/tw.webp" alt="Twitter"> <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <img class="logoRedes" src="./fotos/face.webp" alt="Facebook"> <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <img class="logoRedes" src="./fotos/ig.webp" alt="Instagram"> <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <img class="logoRedes" src="./fotos/yt.webp" alt="YouTube"> <a href="https://www.youtube.com" target="_blank">Youtube</a>
+            </div>
+        </h3>
+        <nav class="navFooter">
+            <ul>
+                <li> <a href="./index.html">Home</a></li>
+                <li> <a href="./pages/nosotros.html">Nosotros</a></li>
+                <li> <a href="./pages/noticias.html">Noticias</a></li>
+                <li> <a href="./pages/urba.html">URBA</a></li>
+                <li> <a href="./pages/productos.html">Productos</a></li>
+                <li> <a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="./index.html">
+                <img class="logo" src="./fotos/Logo-2021-3.webp" alt="homeLogo">
+            </a> 
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/carrito.js" defer></script>
+</body>
+</html>

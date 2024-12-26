@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Agregar favicon--->
+    <link rel="shortcut icon" href="../fotos/favicon.ico" type="image/x-icon">
+    <!--Dependencias Bootstrap--> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Vínculo a estilo propio, por cascada va después-->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!--Link a librería --->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--Título del sitio + página --->
+    <title>URBAnizados | Nosotros </title>
+    <!--Descripción del sitio --->
+    <meta name="description=" content="Página de URBAnizados, programa radial del rugby nacional e internacional, además de otros deportes">
+    <!--Palabras claves del sitio --->
+    <meta name="keywords=" content="RUGBY, RADIO, URBANIZADOS, URBA, DEPORTE, NOTICIAS">
+</head>
+<body>
+    <!--Barra de Navegación-->
+  <header>
+    <div class="top">
+      <h1 class="animate__animated animate__backInDown">URBAnizados</h1>
+    <div>
+      <a href="../index.html">
+        <img class="logo" src="../fotos/Logo-2021-3.webp" alt="homeLogo">
+      </a> 
+    </div>
+    <h4>
+      Toda la información del rugby nacional e internacional
+    </h4>
+    </div>
+    <div>
+      <nav class="navHeader">
+          <a href="../index.html">
+              <img class="logoNav" src="../fotos/Pelota-Rugby-Urba.webp" alt="logoNav">
+          </a>
+          <label class="label_hamburguesa" for="menu_hamburguesa">
+              <svg xmlns="http://www.w3.org/2000/svg" 
+              width="30"  
+              height="40" 
+              fill="currentColor" 
+              class="list_icon" 
+              viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+          </label> 
+          <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+          <ul class="ul_links">
+              <li class="li_links"> <a href="../index.html" class="link">Home</a></li>
+              <li> <a href="./nosotros.html" class="link">Nosotros</a></li>
+              <li> <a href="./noticias.html" class="link">Noticias</a></li>
+              <li> <a href="./urba.html" class="link">URBA</a></li>
+              <li> <a href="./productos.html" class="link">Productos</a></li>
+              <li> <a href="../carrito.html" class="link"><img class="logo-carrito" src="../fotos/Logo-carrito.png" alt="Logo carrito de compras"></a></li>
+              <li> <a href="./contacto.html" class="link">Contacto</a></li>
+          </ul>
+      </nav>
+  </div>
+  </header>
+    <!--Clase para tener encolumnados distintos textos, para probar un poco de Grid con Bootstrap aunque no me gusta como queda el texto en responsive--->
+    <main  class="main">
+        <div class="row bg-transparent border border-black p-3">
+            <h2 class="text-black">Otros deportes de nuestro interés</h2>
+        </div>
+        <div class="row p-3 bg-transparent border border-black p-3">
+            <div class="col-4 bg-transparent p-3">
+                <h2>FÚTBOL</h2>
+                <p class="text-black">Seguimos las competencias del fútbol local, internacional y las campañas de las selecciones, como por ejemplo la Copa América que arranca ahora en junio</p>
+                <img class="w-50" src="../fotos/Pelota-futbol.webp" alt="pelotaFutbol">
+            </div>
+            <div class="col-4 bg-transparent p-3">
+                <h2>TENIS</h2>
+                <p class="text-black">Seguimos de cerca los torneos de Grand Slam, Masters 1000 y otros torneos.</p>
+                <img class="w-50" src="../fotos/Pelota-Tenis.webp" alt="pelotaTenis">
+            </div>
+            <div class="col-4 bg-transparent p-3">
+                <h2>BÁSQUET</h2>
+                <p class="text-black">Nos enfocamos en la NBA, con los grandes equipos que buscan ser campeones, y el torneo local.</p>
+                <img class="w-50" src="../fotos/Pelota-Basquet.webp" alt="pelotaBasquet">
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-12 p-3">
+                <p class="text-black "mx-auto style=" text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; font-style: italic;">Somos un grupo de amigos que formamos un programa de radio en 2016, enfocándonos en el rugby nacional e internacional, y otros deportes. Escuchanos todos los sábados de 13 a 14 horas por Radio FM Lares 104.7</p>
+            </div>
+        </div>
+        <!--Galería muy básica con 3 imágenes para probar el carrusel con Bootstrap, pero quedan muy chicas con el responsive y no pude arreglarlo, pido disculpas por lo mal que queda--->
+        <section class="galeria">
+            <div id="carouselExampleIndicators" class="carousel slide w-50 p-5 m-auto" data-bs-ride="carousel">
+                <div class="carousel-indicators d-block">
+                  <button type="button " data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../fotos/Argentina-campeon-mundial-2022.webp" class="d-block w-100 h-100"  alt="Mundial2022Campeones">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../fotos/Copa-davis-campeones.webp" class="d-block w-100" alt="CopaDavisCampeones">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../fotos/Generacion-dorada.avif" class="d-block w-100" alt="GeneracionDorada">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+    </main>
+    <footer>
+        <!--Footer-->
+        <h3>Contactanos al 011******  <img class = "logoRedes" src="../fotos/wsp.webp" alt="wsp"> </h3>
+        <h3>O podés enviándonos un mail a urbanizados@hotmail.com</h3>
+        <h3>Seguinos en nuestras redes sociales:
+            <div class="redesSociales">
+              <img class="logoRedes" src="../fotos/tw.webp" alt="Twitter"> <a href="https://www.twitter.com" target="_blank">Twitter</a>
+              <img class="logoRedes" src="../fotos/face.webp" alt="Facebook"> <a href="https://www.facebook.com" target="_blank">Facebook</a>
+              <img class="logoRedes" src="../fotos/ig.webp" alt="Instagram"> <a href="https://www.instagram.com" target="_blank">Instagram</a>
+              <img class="logoRedes" src="../fotos/yt.webp" alt="YouTube"> <a href="https://www.youtube.com" target="_blank">Youtube</a>
+            </div>
+          </h3>
+          <nav class="navFooter">
+            <ul>
+              <li> <a href="../index.html">Home</a></li>
+              <li> <a href="./nosotros.html">Nosotros</a></li>
+              <li> <a href="./noticias.html">Noticias</a></li>
+              <li> <a href="./urba.html">URBA</a></li>
+              <li> <a href="./productos.html">Productos</a></li>
+              <li> <a href="./contacto.html">Contacto</a></li>
+            </ul>
+          </nav>
+          <div>
+            <a href="../index.html">
+                <img class="logo" src="../fotos/Logo-2021-3.webp" alt="homeLogo">
+            </a> 
+        </div>
+      </footer>
+  </div>
+    <!--Dependencias a js para Bootstrap--> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

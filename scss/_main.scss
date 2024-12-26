@@ -1,0 +1,529 @@
+/* Main */
+.main{
+    background-color: $fondo;
+    div{ /* Foto principal del Home centrada */
+        text-align: center;
+        height: auto;
+        @media (max-width: 768px) {
+            height: auto;
+        }
+        @media (max-width: 576px) {
+            height: auto;
+        }
+    }
+    /* Textos */
+    h2{
+        text-align: center;
+        color: $texth2;
+        @media screen and (max-width: 570px) {
+            font-size: 40px;
+        }
+        @media screen and (max-width: 460px) {
+            font-size: 30px;
+        }
+    }
+    p{
+        text-align: center;
+        color: black;
+        font-size: 20px;
+    }
+    .historiaUrba{
+        text-align: center;
+        color: $textNav;
+        font-style: italic;
+        font-size: 20px;
+        padding: 10px;
+        margin: 30px;
+        text-align: center;
+        display: block;
+    }
+    .actualidadUrba{
+        text-align: center;
+        color: $fondo;
+        background-color: $footer;
+        padding: 10px;
+    }
+    .t1{
+        text-align: center;
+        color: rgb(35, 3, 3);
+    }
+    .urbaTitulo{
+        text-align: center;
+        color: $textNav;
+    }
+    /* Estilos de letra para palabras destacadas en textos */
+    .bold{
+        font-weight: bold;
+    }
+    .italic{
+        font-style: italic;
+    }
+    /* Fotos */
+    .fotoIndexPrincipal{ /* foto principal de la página Index*/
+        border: solid black(59, 14, 14) 3px;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        height: 300px;
+        font-size: 2rem;
+        text-align: center;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        @media (max-width: 768px) {
+            height: 170px;
+            width: 90px;
+            font-size: 1rem;
+        }
+        @media (max-width: 576px) {
+            height: 150px;
+            width: 80px;
+            font-size: 0.5rem;
+        }
+    }
+    .fotoIndexSecundaria{
+        border: solid black(59, 14, 14) 3px;
+        width: 270px;
+        height: 210px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        height: 300px;
+        font-size: 2rem;
+        text-align: center;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        @media (max-width: 768px) {
+            height: 210px;
+            width: 200px;
+            font-size: 1rem;
+        }
+        @media (max-width: 576px) {
+            height: 180px;
+            width: 170px;
+            font-size: 0.5rem;
+        }
+    }
+    .urba{ /* logo y título de la URBA de la página Index*/
+        border: solid rgb(59, 14, 14) 3px;
+        height: 320px;
+        background-color: rgb(9, 15, 44);
+        .urbaLogo{
+            border: solid rgb(255, 255, 255) 2px;
+            height: 300px;
+            margin: 10px;
+            display: inline-block;
+            opacity: .4;
+            &:hover{
+                border:solid red 4px;
+                opacity:1;
+            }
+        }
+    }
+    .fotosUrba{
+        border: solid black 3px;
+        width: 400px;
+        height: 270px;
+        padding: 0,7rem;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    .iframe{/* Iframe de la página Index */
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    /* Grid para la caja de los Clubes de la página URBA*/
+    .cajaClubes {
+        border: solid rgb(59, 14, 14) 3px;
+        background-color: $footer;
+        width: 90%;
+        font-size: 2rem;
+        text-align: center;
+        margin: 20px auto;
+        display: grid;
+        align-items: center;
+        justify-items: auto;
+        justify-content: center;
+        @media (max-width: 768px) {
+            width: 85%;
+        }
+        @media (max-width: 576px) {
+            width: 80%;
+        }
+        .clubLogo {
+            background-color: rgb(57, 6, 6);
+            border: solid rgb(255, 255, 255) 2px;
+            height: 70px;
+            margin: 10px;
+            display: inline-block;
+            opacity: .4;
+            &:hover {
+                border: solid red 4px;
+                background-color: white;
+                opacity: 1;
+                transition: all 0.3s;
+            }
+            @media (max-width: 768px) {
+                height: 50px;
+            }
+            @media (max-width: 576px) {
+                height: 40px;
+            }
+        }
+    }
+    /* css de las cards para la página Noticias */
+    .cardNoticiasCentradas{/* creé esta section para que las cards queden centradas */
+        text-align: center;
+        .card{
+            width: 350px;
+            height: 700px;
+            padding: 20px;
+            border: solid 2px black;
+            background-color: $cards;
+            font-size: 10px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            overflow: hidden;
+            opacity: 0.5;
+            transition: opacity 0.3s ease; 
+            &:hover{
+                opacity: 4;
+                background-color: $hoverCards;
+                border-radius: 10%;
+            }
+            .card__titulo{
+                text-align: center;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 25px;
+            }
+            .card__description{
+                line-height: 1.2;
+                font-size: .9rem;
+            }
+            .card__cajaImagen{
+                text-align: center;
+            }
+            .card__img{
+                width: 200px;
+                border-radius: 10px;
+                padding: 15px;
+            }
+            a{
+                &:hover{
+                    color:red;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+    /* css de las cards de los logos para la página URBA */
+    .cardClubesCentrados{/* creé esta section para que las cards queden centradas */
+        text-align: center;
+        .cardUrba{
+            width: 300px;
+            height: 700px;
+            padding: 20px;
+            border: solid 2px black;
+            background-color: $cards;
+            font-size: 10px;
+            margin: 5px;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0.5;
+            transition: opacity 0.3s ease; 
+            text-align: center;
+            &:hover{
+                opacity: 4;
+                background-color: $hoverCards;
+                border-radius: 10%;
+            }
+            .card__titulo{
+                text-align: center;
+                padding: 10px;
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .card__description{
+                line-height: 1.2;
+                font-size: .9rem;
+            }
+            .card__cajaImagen{
+                text-align: center;
+            }
+            .card__logo{
+                width: 75px;
+                height: 75px;
+                padding: 5px;
+            }
+            a{
+                &:hover{
+                    color:red;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+    /* css de las cards para la página URBA de la siguiente fecha */
+    .cardProxFechaCentradas{
+        text-align: center;
+        .cardFecha{
+            width: 300px;
+            height: 250px;
+            padding: 10px;
+            border: solid 2px black;
+            background-color: $cards;
+            margin: 10px;
+            display: inline-block;
+            overflow: hidden;
+            justify-content: center;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+            &:hover{
+                opacity: 1;
+                background-color: $hoverCards;
+                border-radius: 10%;
+            }
+            .card__logo{
+                width: 75px;
+                height: 75px;
+                padding: 5px;
+            }
+            a{
+                &:hover{
+                    color:red;
+                    font-style: italic;
+                }
+            }
+            .fechaUrba{
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+        }
+    }
+    /* Tabla del Torneo actual del Top 12 de la página URBA.*/
+    table{
+        color: black;
+        background-color: rgb(189, 183, 183);
+        text-align: center;
+        border: solid black 1,5px;
+        padding: 10px;
+        margin: 0 auto;
+        width: 95%;
+        font-size: 20px;
+        border-collapse: collapse;
+        justify-content: center;
+        th {
+            background-color: rgb(31, 30, 30);
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 25px;
+            @media (max-width: 768px) {
+                font-size: 12px;
+                }
+            @media (max-width: 576px) {
+                font-size: 8px;
+            }
+        }
+        th, td {
+            border: solid #150000 1px;
+            padding: 5px;
+            text-align: center;
+            @media (max-width: 768px) {
+                font-size: 12px;
+                }
+            @media (max-width: 576px) {
+                font-size: 8px;
+            }
+        }
+        .tablaBlanco{
+            background-color: rgb(196, 191, 191);
+            color: black;
+        }
+        .tablaGris{
+            background-color: grey;
+            color: black;
+        }
+        .puestoSemifinales{
+            background-color: rgb(3, 48, 3);
+            color: white;
+        }
+        .puestoDescenso{
+            background-color: red;
+            color: white;
+        }
+        .logoTabla{
+            max-width: 50px;
+            max-height: 50px;
+            @media (max-width: 768px) {
+                max-width: 20px;
+                max-height: 20px;
+                }
+            @media (max-width: 576px) {
+                max-width: 20px;
+                max-height: 20px;
+            }
+        }
+        /* Responsive de la fecha disputada, para que no queden tan grandes las letras en tamaños más chicos de pantalla.*/
+        @media (max-width: 768px) {
+            .tablaBlanco and .tablaGris {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+        @media (max-width: 576px) {
+            .tablaBlanco and .tablaGris{
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+    }
+    .puestosTabla{
+        font-style: italic;
+        color: black;
+        padding: 0;
+    }
+    /* Responsive para la tabla de posiciones, para pantalla estilo tablet y celular.*/
+    @media (max-width: 768px) {
+        .logoTabla {
+            max-width: 25px;
+            max-height: 25px;
+        }
+    }
+    @media (max-width: 576px) {
+        width: 100%;
+        font-size: 10px;
+        th, td {
+            padding: 3px;
+        }
+        .logoTabla {
+            max-width: 15px;
+            max-height: 15px;
+        }
+    }
+    /* Fotos de los campeones de los últimos torneos de la página URBA.*/
+    .campeonesUrba{
+        text-align: center;
+        .fotosUrba{
+            border: solid black 3px;
+            width: 300px;
+            height: 270px;
+            padding: 0,7rem;
+            display: inline-block;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            @media (max-width: 768px) {
+                width: 220px;
+                height: 200px;
+                }
+            @media (max-width: 576px) {
+                width: 150px;
+                height: 120px;
+            }
+            }
+    }
+    /* css Contacto + formulario */
+    .formulario{
+        color: $texth2;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 20px;
+        padding: 20px;
+    }
+    .mb-3{
+        padding: 10px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .boton{
+        padding: 10px;
+        border-radius: 90px;
+        border: solid black 3px;
+    }
+    .camposObligatorios{
+        font-style: italic;
+        padding: 10px;
+    }
+    /* Este "hr" se utiliza, como lo dice el nombre de la clase, para separar el título del texto en las cards */
+    .bordeCard{ 
+        border: solid $bordeCard 3px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+/* css de la página Productos */
+
+.cardProductosCentrados {
+    text-align: center;
+    .card {
+        width: 350px;
+        height: 450px;
+        padding: 20px;
+        border: solid 3px black;
+        background-color: $cards;
+        font-size: 10px;
+        margin: 10px;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        &:hover {
+            opacity: 1;
+            background-color: $hoverCards;
+            border-radius: 10%;
+        }
+        .card__productos {
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 22px;
+            color: rgb(5, 5, 61);
+        }
+        .card__description {
+            line-height: 1.2;
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card__cajaImagen {
+            text-align: center;
+        }
+        .card__img {
+            width: 175px;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        a {
+            &:hover {
+                color: red;
+                font-style: italic;
+            }
+        }
+    }
+}
+.logoCampeon{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+    /* Responsive para el carrusel de la página Nosotros */
+    .galeria{
+        @media (max-width: 768px) {
+            width: auto;
+            }
+        @media (max-width: 576px) {
+            width: auto;
+        }
+    }
+}

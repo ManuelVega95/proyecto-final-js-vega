@@ -1,0 +1,1362 @@
+@charset "UTF-8";
+/* Colores principales a utilizar */
+/* Colores para el botón de los productos */
+/* Colores para la sección del carrito */
+/* Reiniciar el formato antes de arrancar*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: rgb(213, 215, 215);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Textos generales */
+}
+body div .logo { /* logo de la página, que al clickear te lleva al inicio. En todas las páginas, está también al pie de la página para redireccionar al Home */
+  border-radius: 20%;
+  width: 200px;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+body h1 { /* Título principal de la página */
+  color: rgb(5, 5, 54);
+  text-align: center;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: normal;
+  font-size: 70px;
+}
+@media screen and (max-width: 570px) {
+  body h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 460px) {
+  body h1 {
+    font-size: 40px;
+  }
+}
+body h2 { /* Títulos secundarios de la página */
+  color: rgb(5, 5, 54);
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+body h3 { /* Texto del footer */
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 570px) {
+  body h3 {
+    font-size: 12px;
+    width: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 460px) {
+  body h3 {
+    font-size: 10px;
+    width: auto;
+    flex-direction: column;
+  }
+}
+body h4 { /* Breve descripción del sitio en el header */
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 30px;
+  padding: 10px;
+  color: rgb(5, 5, 54);
+  font-weight: bold;
+}
+@media screen and (max-width: 570px) {
+  body h4 {
+    font-size: 15px;
+    width: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 460px) {
+  body h4 {
+    font-size: 12px;
+    width: auto;
+    flex-direction: column;
+  }
+}
+body p {
+  padding: 10px;
+  line-height: 2;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.detalle-venta {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  margin: 20px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: white;
+  color: rgb(5, 5, 54);
+  height: auto;
+  display: grid;
+  /*Barra de navegación principal con menú hamburguesa en responsive*/
+  /*Barra de navegación del footer, usada anteriormente en el header también*/
+  /* Responsive para la barra de navegación del footer */
+}
+header .top {
+  background-color: rgb(213, 215, 215);
+}
+header .top .logo { /* logo de la página, que al apretarlo te lleva al inicio */
+  border-radius: 20%;
+  width: 300px;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  header .top .logo {
+    width: 300px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 570px) {
+  header .top .logo {
+    width: 270px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 460px) {
+  header .top .logo {
+    width: 250px;
+    flex-direction: column;
+  }
+}
+header .navHeader {
+  height: 130px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0;
+}
+header .navHeader .list_icon {
+  color: rgb(5, 5, 54);
+  cursor: pointer;
+  width: "30";
+  height: "40";
+}
+header .navHeader .logoNav {
+  width: 110px;
+  height: 100px;
+  /* Responsive para la barra de navegación del footer */
+}
+@media screen and (max-width: 768px) {
+  header .navHeader .logoNav {
+    width: 95px;
+    height: 85px;
+  }
+}
+@media screen and (max-width: 570px) {
+  header .navHeader .logoNav {
+    width: 80px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 460px) {
+  header .navHeader .logoNav {
+    width: 65px;
+    height: 55px;
+  }
+}
+header .navHeader a {
+  text-decoration: none;
+}
+header .navHeader ol, header .navHeader ul {
+  list-style: none;
+}
+header .navHeader .menu_hamburguesa {
+  display: none;
+}
+header .navHeader .menu_hamburguesa:checked + .ul_links {
+  height: 100px;
+}
+header .navHeader .ul_links {
+  width: 100%;
+  position: absolute;
+  top: auto;
+  left: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0, 5rem;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+header .navHeader .ul_links .link {
+  font-size: auto;
+  color: rgb(5, 5, 54);
+  font-weight: bold;
+}
+header .navHeader .ul_links .link:hover {
+  color: rgb(160, 143, 194);
+  transition: all 0, 5s;
+}
+@media (min-width: 768px) {
+  header .navHeader .label_hamburguesa {
+    display: none;
+    transition: all 0.3s;
+  }
+  header .navHeader .ul_links {
+    position: static;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  header .navHeader .link {
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    padding: 0.2rem 0.7rem;
+  }
+  header .navHeader .link:hover {
+    color: rgb(160, 143, 194);
+    transition: all 0, 5s;
+  }
+}
+header .barraNav {
+  color: rgb(5, 5, 54);
+  list-style-type: none;
+  padding: 10px;
+  margin: 25px auto;
+  height: 40px;
+  text-align: center;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header .barraNav .logoNav { /* logo de la barra de navegación */
+  border-radius: 20%;
+  width: 50px;
+  text-align: left;
+}
+header .barraNav ul { /* le saqué el diseño predeterminado a las listas del menú*/
+  list-style-type: none;
+}
+header .barraNav li {
+  display: inline-block;
+  text-align: center;
+}
+header .barraNav li a {
+  padding: 20px;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(5, 5, 54);
+  text-align: center;
+}
+header .barraNav li a:hover {
+  color: rgb(160, 143, 194);
+  font-style: italic;
+  transition: all 0, 5s;
+}
+header .logo-carrito {
+  height: 25px;
+}
+@media screen and (max-width: 768px) {
+  header .barraNav {
+    width: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 570px) {
+  header .barraNav {
+    width: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 460px) {
+  header .barraNav {
+    width: auto;
+    flex-direction: column;
+  }
+}
+
+/* Main */
+.main {
+  background-color: rgb(213, 215, 215);
+  /* Textos */
+  /* Estilos de letra para palabras destacadas en textos */
+  /* Fotos */
+  /* Grid para la caja de los Clubes de la página URBA*/
+  /* css de las cards para la página Noticias */
+  /* css de las cards de los logos para la página URBA */
+  /* css de las cards para la página URBA de la siguiente fecha */
+  /* Tabla del Torneo actual del Top 12 de la página URBA.*/
+  /* Responsive para la tabla de posiciones, para pantalla estilo tablet y celular.*/
+  /* Fotos de los campeones de los últimos torneos de la página URBA.*/
+  /* css Contacto + formulario */
+  /* Este "hr" se utiliza, como lo dice el nombre de la clase, para separar el título del texto en las cards */
+  /* css de la página Productos */
+  /* Responsive para el carrusel de la página Nosotros */
+}
+.main div { /* Foto principal del Home centrada */
+  text-align: center;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .main div {
+    height: auto;
+  }
+}
+@media (max-width: 576px) {
+  .main div {
+    height: auto;
+  }
+}
+.main h2 {
+  text-align: center;
+  color: rgb(5, 5, 54);
+}
+@media screen and (max-width: 570px) {
+  .main h2 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .main h2 {
+    font-size: 30px;
+  }
+}
+.main p {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+.main .historiaUrba {
+  text-align: center;
+  color: rgb(5, 5, 54);
+  font-style: italic;
+  font-size: 20px;
+  padding: 10px;
+  margin: 30px;
+  text-align: center;
+  display: block;
+}
+.main .actualidadUrba {
+  text-align: center;
+  color: rgb(213, 215, 215);
+  background-color: rgb(5, 5, 54);
+  padding: 10px;
+}
+.main .t1 {
+  text-align: center;
+  color: rgb(35, 3, 3);
+}
+.main .urbaTitulo {
+  text-align: center;
+  color: rgb(5, 5, 54);
+}
+.main .bold {
+  font-weight: bold;
+}
+.main .italic {
+  font-style: italic;
+}
+.main .fotoIndexPrincipal { /* foto principal de la página Index*/
+  border: solid black(59, 14, 14) 3px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  height: 300px;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .main .fotoIndexPrincipal {
+    height: 170px;
+    width: 90px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .main .fotoIndexPrincipal {
+    height: 150px;
+    width: 80px;
+    font-size: 0.5rem;
+  }
+}
+.main .fotoIndexSecundaria {
+  border: solid black(59, 14, 14) 3px;
+  width: 270px;
+  height: 210px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  height: 300px;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .main .fotoIndexSecundaria {
+    height: 210px;
+    width: 200px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .main .fotoIndexSecundaria {
+    height: 180px;
+    width: 170px;
+    font-size: 0.5rem;
+  }
+}
+.main .urba { /* logo y título de la URBA de la página Index*/
+  border: solid rgb(59, 14, 14) 3px;
+  height: 320px;
+  background-color: rgb(9, 15, 44);
+}
+.main .urba .urbaLogo {
+  border: solid rgb(255, 255, 255) 2px;
+  height: 300px;
+  margin: 10px;
+  display: inline-block;
+  opacity: 0.4;
+}
+.main .urba .urbaLogo:hover {
+  border: solid red 4px;
+  opacity: 1;
+}
+.main .fotosUrba {
+  border: solid black 3px;
+  width: 400px;
+  height: 270px;
+  padding: 0, 7rem;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.main .iframe { /* Iframe de la página Index */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.main .cajaClubes {
+  border: solid rgb(59, 14, 14) 3px;
+  background-color: rgb(5, 5, 54);
+  width: 90%;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px auto;
+  display: grid;
+  align-items: center;
+  justify-items: auto;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .main .cajaClubes {
+    width: 85%;
+  }
+}
+@media (max-width: 576px) {
+  .main .cajaClubes {
+    width: 80%;
+  }
+}
+.main .cajaClubes .clubLogo {
+  background-color: rgb(57, 6, 6);
+  border: solid rgb(255, 255, 255) 2px;
+  height: 70px;
+  margin: 10px;
+  display: inline-block;
+  opacity: 0.4;
+}
+.main .cajaClubes .clubLogo:hover {
+  border: solid red 4px;
+  background-color: white;
+  opacity: 1;
+  transition: all 0.3s;
+}
+@media (max-width: 768px) {
+  .main .cajaClubes .clubLogo {
+    height: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .main .cajaClubes .clubLogo {
+    height: 40px;
+  }
+}
+.main .cardNoticiasCentradas { /* creé esta section para que las cards queden centradas */
+  text-align: center;
+}
+.main .cardNoticiasCentradas .card {
+  width: 350px;
+  height: 700px;
+  padding: 20px;
+  border: solid 2px black;
+  background-color: rgb(201, 220, 230);
+  font-size: 10px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.main .cardNoticiasCentradas .card:hover {
+  opacity: 4;
+  background-color: rgb(156, 177, 188);
+  border-radius: 10%;
+}
+.main .cardNoticiasCentradas .card .card__titulo {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.main .cardNoticiasCentradas .card .card__description {
+  line-height: 1.2;
+  font-size: 0.9rem;
+}
+.main .cardNoticiasCentradas .card .card__cajaImagen {
+  text-align: center;
+}
+.main .cardNoticiasCentradas .card .card__img {
+  width: 200px;
+  border-radius: 10px;
+  padding: 15px;
+}
+.main .cardNoticiasCentradas .card a:hover {
+  color: red;
+  font-style: italic;
+}
+.main .cardClubesCentrados { /* creé esta section para que las cards queden centradas */
+  text-align: center;
+}
+.main .cardClubesCentrados .cardUrba {
+  width: 300px;
+  height: 700px;
+  padding: 20px;
+  border: solid 2px black;
+  background-color: rgb(201, 220, 230);
+  font-size: 10px;
+  margin: 5px;
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+.main .cardClubesCentrados .cardUrba:hover {
+  opacity: 4;
+  background-color: rgb(156, 177, 188);
+  border-radius: 10%;
+}
+.main .cardClubesCentrados .cardUrba .card__titulo {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.main .cardClubesCentrados .cardUrba .card__description {
+  line-height: 1.2;
+  font-size: 0.9rem;
+}
+.main .cardClubesCentrados .cardUrba .card__cajaImagen {
+  text-align: center;
+}
+.main .cardClubesCentrados .cardUrba .card__logo {
+  width: 75px;
+  height: 75px;
+  padding: 5px;
+}
+.main .cardClubesCentrados .cardUrba a:hover {
+  color: red;
+  font-style: italic;
+}
+.main .cardProxFechaCentradas {
+  text-align: center;
+}
+.main .cardProxFechaCentradas .cardFecha {
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  border: solid 2px black;
+  background-color: rgb(201, 220, 230);
+  margin: 10px;
+  display: inline-block;
+  overflow: hidden;
+  justify-content: center;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+.main .cardProxFechaCentradas .cardFecha:hover {
+  opacity: 1;
+  background-color: rgb(156, 177, 188);
+  border-radius: 10%;
+}
+.main .cardProxFechaCentradas .cardFecha .card__logo {
+  width: 75px;
+  height: 75px;
+  padding: 5px;
+}
+.main .cardProxFechaCentradas .cardFecha a:hover {
+  color: red;
+  font-style: italic;
+}
+.main .cardProxFechaCentradas .cardFecha .fechaUrba {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.main table {
+  color: black;
+  background-color: rgb(189, 183, 183);
+  text-align: center;
+  border: solid black 1, 5px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 95%;
+  font-size: 20px;
+  border-collapse: collapse;
+  justify-content: center;
+  /* Responsive de la fecha disputada, para que no queden tan grandes las letras en tamaños más chicos de pantalla.*/
+}
+.main table th {
+  background-color: rgb(31, 30, 30);
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 25px;
+}
+@media (max-width: 768px) {
+  .main table th {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .main table th {
+    font-size: 8px;
+  }
+}
+.main table th, .main table td {
+  border: solid #150000 1px;
+  padding: 5px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .main table th, .main table td {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .main table th, .main table td {
+    font-size: 8px;
+  }
+}
+.main table .tablaBlanco {
+  background-color: rgb(196, 191, 191);
+  color: black;
+}
+.main table .tablaGris {
+  background-color: grey;
+  color: black;
+}
+.main table .puestoSemifinales {
+  background-color: rgb(3, 48, 3);
+  color: white;
+}
+.main table .puestoDescenso {
+  background-color: red;
+  color: white;
+}
+.main table .logoTabla {
+  max-width: 50px;
+  max-height: 50px;
+}
+@media (max-width: 768px) {
+  .main table .logoTabla {
+    max-width: 20px;
+    max-height: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .main table .logoTabla {
+    max-width: 20px;
+    max-height: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .main table .tablaBlanco and .tablaGris {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .main table .tablaBlanco and .tablaGris {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+.main .puestosTabla {
+  font-style: italic;
+  color: black;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .main .logoTabla {
+    max-width: 25px;
+    max-height: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .main {
+    width: 100%;
+    font-size: 10px;
+  }
+  .main th, .main td {
+    padding: 3px;
+  }
+  .main .logoTabla {
+    max-width: 15px;
+    max-height: 15px;
+  }
+}
+.main .campeonesUrba {
+  text-align: center;
+}
+.main .campeonesUrba .fotosUrba {
+  border: solid black 3px;
+  width: 300px;
+  height: 270px;
+  padding: 0, 7rem;
+  display: inline-block;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .main .campeonesUrba .fotosUrba {
+    width: 220px;
+    height: 200px;
+  }
+}
+@media (max-width: 576px) {
+  .main .campeonesUrba .fotosUrba {
+    width: 150px;
+    height: 120px;
+  }
+}
+.main .formulario {
+  color: rgb(5, 5, 54);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+.main .mb-3 {
+  padding: 10px;
+  margin: 0 auto;
+  text-align: left;
+}
+.main .boton {
+  padding: 10px;
+  border-radius: 90px;
+  border: solid black 3px;
+}
+.main .camposObligatorios {
+  font-style: italic;
+  padding: 10px;
+}
+.main .bordeCard {
+  border: solid rgb(17, 2, 40) 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.main .cardProductosCentrados {
+  text-align: center;
+}
+.main .cardProductosCentrados .card {
+  width: 350px;
+  height: 450px;
+  padding: 20px;
+  border: solid 3px black;
+  background-color: rgb(201, 220, 230);
+  font-size: 10px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.main .cardProductosCentrados .card:hover {
+  opacity: 1;
+  background-color: rgb(156, 177, 188);
+  border-radius: 10%;
+}
+.main .cardProductosCentrados .card .card__productos {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(5, 5, 61);
+}
+.main .cardProductosCentrados .card .card__description {
+  line-height: 1.2;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main .cardProductosCentrados .card .card__cajaImagen {
+  text-align: center;
+}
+.main .cardProductosCentrados .card .card__img {
+  width: 175px;
+  border-radius: 10px;
+  padding: 15px;
+}
+.main .cardProductosCentrados .card a:hover {
+  color: red;
+  font-style: italic;
+}
+.main .logoCampeon {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+@media (max-width: 768px) {
+  .main .galeria {
+    width: auto;
+  }
+}
+@media (max-width: 576px) {
+  .main .galeria {
+    width: auto;
+  }
+}
+
+/* footer general --texto, logos (wsp, youtube, twitter, facebook, instagram - para esta entrega creé una clase única para todos los logos) y el responsive para cada página + hover en logos */
+footer {
+  background-color: rgb(5, 5, 54);
+  text-align: center;
+  /* Responsive para achicar las imágenes y texto del Footer */
+  /* Responsive para la barra de navegación */
+}
+footer h3 {
+  color: white;
+}
+footer a {
+  text-decoration: none;
+  margin: 15px;
+  color: red;
+}
+footer a:hover {
+  color: rgb(160, 143, 194);
+  font-style: italic;
+}
+footer .logoRedes {
+  border-radius: 50%;
+  width: 25px;
+  opacity: 0.4;
+}
+footer .logoRedes:hover {
+  opacity: 1;
+}
+footer .redesSociales {
+  text-align: center;
+}
+footer .navFooter { /* barra de navegación que está en el footer de cada página*/
+  padding: 10px;
+  margin: 25px auto;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .navFooter ul { /* le saqué el diseño predeterminado a las listas del menú*/
+  list-style-type: none;
+}
+footer .navFooter li {
+  display: inline-block;
+  text-align: center;
+}
+footer .navFooter li a {
+  padding: 20px;
+  margin: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  text-align: center;
+}
+footer .navFooter li a:hover {
+  color: rgb(160, 143, 194);
+  font-style: italic;
+  transition: all 0, 5s;
+}
+@media (max-width: 576px) {
+  footer .logoRedes {
+    width: 15px;
+  }
+  footer footer {
+    font-size: small;
+  }
+}
+@media (max-width: 768px) {
+  footer .logoRedes {
+    width: 20px;
+  }
+  footer footer {
+    font-size: medium;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .barraNav {
+    width: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 570px) {
+  footer .barraNav {
+    width: auto;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 460px) {
+  footer .barraNav {
+    width: auto;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .cajaClubes {
+    width: 100vw;
+    height: 700px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "Alumni AtleticoDelRosario" "Belgrano BuenosAires" "Champagnat CUBA" "CASI Hindu" "Newman Regatas" "SIC SanLuis";
+  }
+}
+@media screen and (max-width: 570px) {
+  .cajaClubes {
+    width: 80vw;
+    height: 440px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "Alumni AtleticoDelRosario Belgrano" "BuenosAires Champagnat CUBA" "CASI Hindu Newman" "Regatas SIC SanLuis";
+  }
+}
+@media screen and (max-width: 768px) {
+  .cajaClubes {
+    width: 60vw;
+    height: 400px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "Alumni AtleticoDelRosario Belgrano BuenosAires" "Champagnat CUBA CASI Hindu" "Newman Regatas SIC SanLuis";
+  }
+}
+@media screen and (min-width: 769px) {
+  .cajaClubes {
+    width: 90%;
+    height: auto;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "Alumni AtleticoDelRosario Belgrano BuenosAires Champagnat CUBA" "CASI Hindu Newman Regatas SIC SanLuis";
+  }
+}
+/* Responsive para las Cards de la Página Productos */
+@media (max-width: 768px) {
+  .card {
+    width: 250px;
+  }
+}
+@media (max-width: 480px) {
+  .card {
+    width: 200px;
+  }
+}
+/* Responsive para el Bootstrap Grid de la página Nosotros. */
+@media (max-width: 768px) {
+  .col-4 h2 {
+    font-size: 1.5rem;
+  }
+  .col-4 p {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+/* Formato del botón para agregar al carrito */
+.agregar-al-carrito {
+  background-color: #ffffff;
+  color: #0e0433;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  gap: 10px;
+  border: black 1px solid;
+}
+.agregar-al-carrito:hover {
+  background-color: rgba(255, 255, 255, 0.3803921569);
+  color: #220c74;
+  transform: scale(1.05);
+}
+.agregar-al-carrito:active {
+  transform: scale(0.98);
+}
+.agregar-al-carrito:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 600px) {
+  .agregar-al-carrito {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+.icono-carrito {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  fill: white;
+}
+
+.titulo-talle {
+  font-family: "Arial", sans-serif;
+  font-size: 6px;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 2px 5px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 5px;
+}
+.titulo-talle:hover {
+  background-color: #041019;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.talle-selector {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 8px 12px;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 10px;
+}
+.talle-selector:hover {
+  background-color: #041019;
+  transform: scale(1.05);
+  color: white;
+}
+.talle-selector .opcion {
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.talle-selector .opcion:hover {
+  background-color: navy;
+  color: white;
+}
+.talle-selector .opcion.selected {
+  background-color: navy;
+  color: white;
+}
+
+.aclaracion-pago {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.aclaracion-pago strong {
+  font-weight: bold;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: inline-block;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button.accion {
+  background-color: #4CAF50;
+  color: white;
+}
+button.accion:hover {
+  background-color: rgb(60.5577689243, 139.4422310757, 63.7450199203);
+}
+button.accion:active {
+  background-color: rgb(45.1155378486, 103.8844621514, 47.4900398406);
+}
+
+button.sumar-cantidad {
+  background-color: #FF6347;
+  color: white;
+}
+button.sumar-cantidad:hover {
+  background-color: rgb(255, 55.7608695652, 20);
+}
+button.sumar-cantidad:active {
+  background-color: rgb(224, 34.0869565217, 0);
+}
+
+button.eliminar {
+  background-color: #FF6347;
+  color: white;
+}
+button.eliminar:hover {
+  background-color: rgb(255, 55.7608695652, 20);
+}
+button.eliminar:active {
+  background-color: rgb(224, 34.0869565217, 0);
+}
+
+button.eliminar-todo {
+  background-color: #FF6347;
+  color: white;
+}
+button.eliminar-todo:hover {
+  background-color: rgb(255, 55.7608695652, 20);
+}
+button.eliminar-todo:active {
+  background-color: rgb(224, 34.0869565217, 0);
+}
+
+button.vaciar-carrito {
+  background-color: #DC143C;
+  color: white;
+}
+button.vaciar-carrito:hover {
+  background-color: rgb(173.25, 15.75, 47.25);
+}
+button.vaciar-carrito:active {
+  background-color: rgb(126.5, 11.5, 34.5);
+}
+
+.producto-en-carrito {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+.producto-en-carrito:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+.producto-en-carrito h3 {
+  color: rgb(5, 5, 57);
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.producto-en-carrito span {
+  color: rgb(5, 5, 57);
+  display: block;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.producto-en-carrito img.producto-imagen {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.total-carrito {
+  background-color: rgb(5, 5, 57);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.total-carrito:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.total-producto-carrito {
+  margin: 10px;
+  color: #041019;
+  font-weight: 600;
+}
+
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+  display: block;
+}
+
+input[type=text],
+input[type=email],
+select {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+select:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+button[type=submit] {
+  width: 100%;
+  padding: 1rem;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button[type=submit]:hover {
+  background-color: #5a53e0;
+}
+button[type=submit]:focus {
+  outline: none;
+}
+
+select {
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+select:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+main {
+  background-color: #f9f9f9;
+  padding: 2rem;
+}
+
+form .campo {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem;
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

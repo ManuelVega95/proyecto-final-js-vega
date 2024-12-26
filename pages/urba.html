@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Agregar favicon--->
+    <link rel="shortcut icon" href="../fotos/favicon.ico" type="image/x-icon">
+     <!--Link para utilizar el css--->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!--Link a librería --->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--Título del sitio + página --->
+    <title>URBAnizados | URBA</title>
+    <!--Descripción del sitio --->
+    <meta name="description=" content="Página de URBAnizados, programa radial del rugby nacional e internacional, además de otros deportes">
+    <!--Palabras claves del sitio --->
+    <meta name="keywords=" content="RUGBY, RADIO, URBANIZADOS, URBA, DEPORTE, NOTICIAS">
+</head>
+<body>
+    <!--Barra de Navegación-->
+    <header>
+        <div class="top">
+            <h1 class="animate__animated animate__backInDown">URBAnizados</h1>
+        <div>
+            <a href="../index.html">
+                <img class="logo" src="../fotos/Logo-2021-3.webp" alt="homeLogo">
+            </a> 
+        </div>
+        <h4>
+            Toda la información del rugby nacional e internacional
+        </h4>
+        </div>
+        <div>
+            <nav class="navHeader">
+                <a href="../index.html">
+                    <img class="logoNav" src="../fotos/Pelota-Rugby-Urba.webp" alt="logoNav">
+                </a>
+                <label class="label_hamburguesa" for="menu_hamburguesa">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="30"  
+                    height="40" 
+                    fill="currentColor" 
+                    class="list_icon" 
+                    viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </label> 
+                <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+                <ul class="ul_links">
+                    <li class="li_links"> <a href="../index.html" class="link">Home</a></li>
+                    <li> <a href="./nosotros.html" class="link">Nosotros</a></li>
+                    <li> <a href="./noticias.html" class="link">Noticias</a></li>
+                    <li> <a href="./urba.html" class="link">URBA</a></li>
+                    <li> <a href="./productos.html" class="link">Productos</a></li>
+                    <li> <a href="../carrito.html" class="link"><img class="logo-carrito" src="../fotos/Logo-carrito.png" alt="Logo carrito de compras"></a></li>
+                    <li> <a href="./contacto.html" class="link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+	</header>
+    <!--Main - caja con los clubes-->
+        <main class ="main">
+        <!--Clubes URBA Top 12 2024 ordenados-->
+            <h2>CLUBES URBA TOP 12 2024</h2>
+            <section class="cajaClubes">
+            <a href="https://urba.org.ar/team/alumni" target="_blank"><img src="../fotos/Alumni.webp" class="clubLogo" alt="Alumni"></a>
+            <a href="https://urba.org.ar/team/atletico-del-rosario" target="_blank"><img src="../fotos/Atl-rosario.webp" class="clubLogo" alt="AtleticoDelRosario"></a>
+            <a href="https://urba.org.ar/team/belgrano-athletic" target="_blank"><img src="../fotos/Belgrano.webp" class="clubLogo" alt="Belgrano"></a>
+            <a href="https://urba.org.ar/team/buenos-aires-crc" target="_blank"><img src="../fotos/Buenos-Aires.webp" class="clubLogo" alt="BuenosAires"></a>
+            <a href="https://urba.org.ar/team/champagnat" target="_blank"><img src="../fotos/Champagnat.webp" class="clubLogo" alt="Champagnat"></a>
+            <a href="https://urba.org.ar/team/cuba" target="_blank"><img src="../fotos/CUBA.webp" class="clubLogo" alt="CUBA"></a>
+            <a href="https://urba.org.ar/team/casi" target="_blank"><img src="../fotos/Casi.webp" class="clubLogo" alt="CASI"></a>
+            <a href="https://urba.org.ar/team/hindu-club" target="_blank"><img src="../fotos/Hindu.webp" class="clubLogo" alt="Hindu"></a>
+            <a href="https://urba.org.ar/team/newman" target="_blank"><img src="../fotos/Newman.webp" class="clubLogo" alt="Newman"></a>
+            <a href="https://urba.org.ar/team/regatas-bella-vista" target="_blank"><img src="../fotos/Regatas.webp" class="clubLogo" alt="Regatas"></a>
+            <a href="https://urba.org.ar/team/sic" target="_blank"><img src="../fotos/Sic.webp" class="clubLogo" alt="SIC"></a>
+            <a href="https://urba.org.ar/team/san-luis-2" target="_blank"><img src="../fotos/San-luis.webp" class="clubLogo" alt="SanLuis"></a>
+            </section>
+
+        <!--Breve info de los clubes URBA Top 12 2024 con Cards-->    
+        <section class="cardClubesCentrados">
+            <div class="cardUrba">
+                <h2 class="card__titulo">Alumni</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Alumni.webp" alt="Alumni">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic">(7). </span> 1989, 1990, 1991, 1992, 2001, 2018, <span class="bold">2024</span>. </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic">(28). </span> 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024. </p> 
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 13 de diciembre de 1951. <a href="https://urba.org.ar/team/alumni" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">Atlético del Rosario</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Atl-rosario.webp" alt="AtleticoDelRosario">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (5). </span> 1905, 1906, 1935, 1996, 2000. </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic">(23). </span> 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2005, 2006, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2022, 2023, 2024. </p> 
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 27 de Marzo de 1867. <a href="https://urba.org.ar/team/atletico-del-rosario" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">Belgrano Athletic</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Belgrano.webp" alt="Belgrano">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (11). </span> 1907, 1910, 1914, 1921, 1936, 1940, 1963, 1966, 1967, 1968, 2016. </p> 
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic">(20). </span> 1996, 1997, 2002, 2006, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024. </p> 
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 17 de agosto de 1896. <a href="https://urba.org.ar/team/belgrano-athletic" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">Buenos Aires</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Buenos-Aires.webp" alt="BuenosAires">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic">(10). </span> 1900, 1901, 1902, 1903, 1904, 1908, 1909, 1915, 1958, 1959. </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (12). </span> 1997, 1998, 2000, 2001, 2002, 2003, 2004, 2008, 2009, 2010, 2011, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> Con anterioridad al 8 de Diciembre de 1864. <a href="https://urba.org.ar/team/buenos-aires-crc" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">Champagnat</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Champagnat.webp" alt="Champagnat">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (0). </span></p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (12). </span> 1997, 1998, 2000, 2001, 2002, 2003, 2004, 2008, 2009, 2010, 2011, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 30 de noviembre de 1956. <a href="https://urba.org.ar/team/champagnat" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">CUBA</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/CUBA.webp" alt="CUBA">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (15). </span> 1931, 1942, 1944, 1945, 1947, 1949, 1950, 1951, 1952, 1965, 1968, 1969, 1970, 2013, 2021. </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (22). </span> 1997, 1998, 1999, 2000, 2003, 2004, 2006, 2007, 2008, 2009, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 11 de mayo de 1918. <a href="https://urba.org.ar/team/cuba" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">CASI</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Casi.webp" alt="CASI">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (33). </span> 1917, 1918, 1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929, 1930, 1933, 1934, 1943, 1949, 1954, 1955, 1956, 1957, 1960, 1961, 1962, 1964, 1967, 1974, 1975, 1976, 1981, 1982, 1985, 2005. </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (28). </span> 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 24 de octubre de 1902. <a href="https://urba.org.ar/team/casi" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">Hindú</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Hindu.webp" alt="Hindu">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (11). </span> 1996, 1998, 2006, 2007, 2008, 2009, 2012, 2014, 2015, 2017, 2022. </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (28). </span> 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 10 de septiembre de 1919. <a href="https://urba.org.ar/team/hindu-club" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">Newman</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Newman.webp" alt="Newman">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (0). </span> </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (26). </span> 1997, 1998, 1999, 2000, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 15 de diciembre de 1975. <a href="https://urba.org.ar/team/newman" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">Regatas</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Regatas.webp" alt="Regatas">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (0). </span> </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (21). </span> 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2007, 2008, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 14 de febrero de 1895. <a href="https://urba.org.ar/team/regatas-bella-vista"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">SIC</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/Sic.webp" alt="SIC">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (27). </span> 1939, 1941, 1948, 1970, 1971, 1972, 1973, 1977, 1978, 1979, 1980, 1983, 1984, 1986, 1987, 1988, 1993, 1994, 1997, 1999, 2002, 2003, 2004, 2010, 2011, 2019, 2023. </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (28). </span> 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 14 de diciembre de 1935. <a href="https://urba.org.ar/team/sic" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+    
+            <div class="cardUrba">
+                <h2 class="card__titulo">San Luis</h2>
+                <hr class="bordeCard">
+                <div class="card__cajaImagen">
+                    <img class= card__logo src="../fotos/San-luis.webp" alt="SanLuis">
+                </div>
+                <p class="card__description"> <span class="bold" >Títulos:</span> <span class="italic"> (0). </span> </p>
+                <p class="card__description"> <span class="bold" >Participaciones en Top 12 / Top 14:</span> <span class="italic"> (24). </span> 1997, 1998, 1999, 2000, 2001, 2002, 2004, 2005, 2006, 2008, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024. </p>
+                <p class="card__description"> <span class="bold">Fecha de Fundación:</span> 15 de diciembre de 1961. <a href="https://urba.org.ar/team/san-luis-2" target="_blank"><alt="Noticia3">Seguir leyendo</a> </p>
+            </div>
+        </section>
+
+        <!--Finales del Top 12 de la URBA-->
+        <h2>FINAL - 26 de Octubre 2024</h2>
+        <table>
+            <tbody>
+                <tr class="tablaGris">
+                    <td><img class="logoTabla" src="../fotos/Belgrano.webp" alt="Belgrano Athletic"></td>
+                    <td>Belgrano Athletic</td>
+                    <td>17 - <span class="bold">20</span></td>
+                    <td><span class="bold">ALUMNI (CAMPEÓN)</span></td>
+                    <td><img class="logoTabla" src="../fotos/Alumni.webp" alt="Alumni"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="puestosTabla"><span class="bold">Campeón del URBA Top 12 2024: <img class="logoCampeon" src="../fotos/Alumni.webp" alt="Alumni">ALUMNI</span> (7° título URBA)</p>
+        <h2>SEGUNDA SEMIFINAL - 20 de Octubre 2024</h2>
+        <table>
+            <tbody>
+                <tr class="tablaBlanco">
+                    <td><img class="logoTabla" src="../fotos/Sic.webp" alt="SIC"></td>
+                    <td>SIC</td>
+                    <td>21 - <span class="bold">30</span></td>
+                    <td><span class="bold">ALUMNI</span></td>
+                    <td><img class="logoTabla" src="../fotos/Alumni.webp" alt="Alumni"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>PRIMERA SEMIFINAL - 19 de Octubre 2024</h2>
+        <table>
+            <tbody>
+                <tr class="tablaGris">
+                    <td><img class="logoTabla" src="../fotos/Newman.webp" alt="Newman"></td>
+                    <td>Newman</td>
+                    <td>27 - <span class="bold">28</span></td>
+                    <td><span class="bold">BELGRANO ATHLETIC</span></td>
+                    <td><img class="logoTabla" src="../fotos/Belgrano.webp" alt="Belgrano Athletic"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Tabla de posiciones del Torneo Top 12 de la URBA-->
+        <h2>TABLA DE POSICIONES - TABLA FINAL URBA TOP 12 2024</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>POS</th>
+                    <th></th>
+                    <th>CLUB</th>
+                    <th>PJ</th>
+                    <th>G</th>
+                    <th>E</th>
+                    <th>P</th>
+                    <th>PF</th>
+                    <th>PC</th>
+                    <th>DP</th>
+                    <th>BO</th>
+                    <th>BD</th>
+                    <th>PTS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="puestoSemifinales">
+                    <td>1*</td>
+                    <td><img class="logoTabla" src="../fotos/Newman.webp" alt="Newman"></td>
+                    <td>Newman</td>
+                    <td>22</td>
+                    <td>17</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>749</td>
+                    <td>501</td>
+                    <td>248</td>
+                    <td>7</td>
+                    <td>2</td>|
+                    <td>77</td>
+                </tr>
+                <tr class="puestoSemifinales">
+                    <td>2*</td>
+                    <td><img class="logoTabla" src="../fotos/Sic.webp" alt="SIC"></td>
+                    <td>SIC</td>
+                    <td>22</td>
+                    <td>17</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>661</td>
+                    <td>459</td>
+                    <td>202</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>75</td>
+                </tr>
+                <tr class="puestoSemifinales">
+                    <td>3*</td>
+                    <td><img class="logoTabla" src="../fotos/Alumni.webp" alt="Alumni"></td>
+                    <td>Alumni</td>
+                    <td>22</td>
+                    <td>16</td>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>627</td>
+                    <td>502</td>
+                    <td>125</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>73</td>
+                </tr>
+                <tr class="puestoSemifinales">
+                    <td>4*</td>
+                    <td><img class="logoTabla" src="../fotos/Belgrano.webp" alt="Belgrano"></td>
+                    <td>Belgrano</td>
+                    <td>22</td>
+                    <td>15</td>
+                    <td>0</td>
+                    <td>7</td>
+                    <td>720</td>
+                    <td>539</td>
+                    <td>181</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>71</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><img class="logoTabla" src="../fotos/Casi.webp" alt="CASI"></td>
+                    <td>CASI</td>
+                    <td>22</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>740</td>
+                    <td>521</td>
+                    <td>219</td>
+                    <td>9</td>
+                    <td>5</td>
+                    <td>68</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><img class="logoTabla" src="../fotos/Hindu.webp" alt="Hindu"></td>
+                    <td>Hindú</td>
+                    <td>22</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>11</td>
+                    <td>493</td>
+                    <td>604</td>
+                    <td>-111</td>
+                    <td>1</td>
+                    <td>4</td>
+                    <td>47</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><img class="logoTabla" src="../fotos/San-luis.webp" alt="SanLuis"></td>
+                    <td>San Luis</td>
+                    <td>22</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>12</td>
+                    <td>487</td>
+                    <td>572</td>
+                    <td>-85</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>47</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><img class="logoTabla" src="../fotos/CUBA.webp" alt="CUBA"></td>
+                    <td>CUBA</td>
+                    <td>22</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>602</td>
+                    <td>572</td>
+                    <td>30</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>46</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><img class="logoTabla" src="../fotos/Buenos-Aires.webp" alt="BuenosAires"></td>
+                    <td>Buenos Aires</td>
+                    <td>22</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>496</td>
+                    <td>615</td>
+                    <td>-119</td>
+                    <td>2</td>
+                    <td>5</td>
+                    <td>41</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><img class="logoTabla" src="../fotos/Regatas.webp" alt="Regatas"></td>
+                    <td>Regatas Bella Vista</td>
+                    <td>22</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>13</td>
+                    <td>457</td>
+                    <td>519</td>
+                    <td>-62</td>
+                    <td>1</td>
+                    <td>6</td>
+                    <td>41</td>
+                </tr>
+                <tr class="puestoDescenso">
+                    <td>11**</td>
+                    <td><img class="logoTabla" src="../fotos/Champagnat.webp" alt="Champagnat"></td>
+                    <td>Champagnat</td>
+                    <td>22</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>18</td>
+                    <td>466</td>
+                    <td>748</td>
+                    <td>-282</td>
+                    <td>1</td>
+                    <td>8</td>
+                    <td>21</td>
+                </tr>
+                <tr class="puestoDescenso">
+                    <td>12**</td>
+                    <td><img class="logoTabla" src="../fotos/Atl-rosario.webp" alt="AtleticoDelRosario"></td>
+                    <td>Atlético del Rosario</td>
+                    <td>22</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>17</td>
+                    <td>498</td>
+                    <td>844</td>
+                    <td>-346</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>19</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="puestosTabla">*puestos de semifinales (1° vs. 4°; 2° vs. 3°).</p>
+        <p class="puestosTabla">**puestos de descenso.</p>
+        <p class="puestosTabla"><span class="bold">- Descendieron a la Primera "A" 2025: Champagnat y Atlético del Rosario</span></p>
+        <p class="puestosTabla"><span class="bold">- Ascendieron desde la Primera "A" para disputar el Top 12 2025: La Plata y Los Tilos</span></p>
+
+        <!--Última fecha disputada del Top 12 de la URBA-->
+        <h2>TOP 12 URBA - FECHA 22 / SÁBADO 5 DE OCTUBRE DEL 2024</h2>
+        <table>
+            <tbody>
+                <tr class="tablaGris">
+                    <td><img class="logoTabla" src="../fotos/Hindu.webp" alt="Hindu"></td>
+                    <td>Hindú</td>
+                    <td>19 - <span class="bold"> 43 (B)</span></td>
+                    <td><span class="bold">ALUMNI</span></td>
+                    <td><img class="logoTabla" src="../fotos/Alumni.webp" alt="Alumni"></td>
+                </tr>
+                <tr class="tablaBlanco">
+                    <td><img class="logoTabla" src="../fotos/San-luis.webp" alt="San Luis"></td>
+                    <td><span class="bold">SAN LUIS</span></td>
+                    <td><span class="bold">29</span> - 27</td>
+                    <td>Belgrano Athletic</td>
+                    <td><img class="logoTabla" src="../fotos/Belgrano.webp" alt="Belgrano Athletic"></td>
+                </tr>
+                <tr class="tablaGris">
+                    <td><img class="logoTabla" src="../fotos/Regatas.webp" alt="Regatas Bella Vista"></td>
+                    <td><span class="bold">REGATAS BELLA VISTA</span></td>
+                    <td>26 - 17</td>
+                    <td>Buenos Aires C&RC</td>
+                    <td><img class="logoTabla" src="../fotos/Buenos-Aires.webp" alt="Buenos Aires C&RC"></td>
+                </tr>
+                <tr class="tablaBlanco">
+                    <td><img class="logoTabla" src="../fotos/CASI.webp" alt="CASI"></td>
+                    <td>CASI</td>
+                    <td>21 - <span class="bold">24</span></td>
+                    <td><span class="bold">Newman</span></td>
+                    <td><img class="logoTabla" src="../fotos/Newman.webp" alt="Newman"></td>
+                </tr>
+                <tr class="tablaGris">
+                    <td><img class="logoTabla" src="../fotos/CUBA.webp" alt="CUBA"></td>
+                    <td><span class="bold">CUBA</span></td>
+                    <td><span class="bold">50 (B)</span> - 29</td>
+                    <td>Atlético del Rosario</td>
+                    <td><img class="logoTabla" src="../fotos/Atl-rosario.webp" alt="Atlético del Rosario"></td>
+                </tr>
+                <tr class="tablaBlanco">
+                    <td><img class="logoTabla" src="../fotos/Sic.webp" alt="SIC"></td>
+                    <td><span class="bold">SIC</span></td>
+                    <td> <span class="bold">55 (B)</span> - 12</td>
+                    <td>Champagnat</td>
+                    <td><img class="logoTabla" src="../fotos/Champagnat.webp" alt="Champagnat"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+        <!--Actualidad Urba = texto corto y simple para sumar-->
+        <h2>ACTUALIDAD URBA</h2>
+        <p class="actualidadUrba">
+            La Unión de Rugby de Buenos Aires está integrada por 91 clubes que participan en los torneos de sus seis diferentes categorías (Top 12, Primera A, B y C, Segunda, Tercera y Desarrollo).
+            A nivel de clubes, los equipos de Buenos Aires participan del Torneo Nacional de Clubes en el que, desde la temporada 1993, los conjuntos URBA obtuvieron 22 de las 27 ediciones disputadas (la última por el SIC este 2023), <span class="bold">siendo Hindú Club el máximo ganador de la historia con 11 títulos.</span>
+
+        </p>
+        <!--Historia de la URBA. Incluyo un texto copiado de la página de la URBA (urba.org.ar), para incluir más a la temática-->
+        <h2>HISTORIA</h2>
+        <p>
+            <div class="historiaUrba">
+                La extensa historia del rugby argentino tiene como punto de partida el 10 de abril de 1899, cuando se funda “The River Plate Rugby Union”, que más adelante se convertiría en la “Unión de Rugby del Río de la Plata” antecesora de la “Unión Argentina de Rugby», creada por cuatro de sus clubes fundadores e integrantes de la URBA, instituciones con influencia de trabajadores ingleses que se empleaban en empresas ferroviarias por aquellos años.
+            </div>
+            <div class="historiaUrba">
+                El 26 de diciembre de 1995, cuando se escinde y se reorganiza la URBA, su estatuto establece en el artículo 1º que “La Unión de Rugby de Buenos Aires es una Asociación Civil constituida por tiempo indeterminado y con domicilio legal en jurisdicción de la Ciudad de Buenos Aires. Esta Entidad fue fundada el 10 de abril de 1899, bajo la denominación de The River Plate Rugby Unión Championship por los entonces denominados Belgrano Athletic Club -1896-, Buenos Aires Football Club –previamente a 1864-, “Lomas Athletic Club -1891- y Rosario Athletic Club -1867-, adoptando luego la de “Unión de Rugby del Río de la Plata” y posteriormente, por la sucesiva incorporación de los clubes locales y Uniones del país, dio como resultado a la actual “Unión Argentina de Rugby”.
+            </div>
+            <div class="historiaUrba">
+                Aquellos clubes que en la actualidad se encuentran directamente afiliados o adheridos a la misma, al sólo efecto de facilitar su reorganización, con fecha 26 de diciembre de 1995, se escinden y agrupan bajo la denominación de “Unión de Rugby de Buenos Aires (U.R.B.A.)”, otorgando las normas estatutarias que la regirán en lo sucesivo”.
+            </div>
+            <div class="historiaUrba">
+                En cuanto  lo deportivo, el primer torneo oficial sería conquistado por el club Lomas Athletic, en 1899, mientras que Buenos Aires dominaría los próximos cinco torneos y se consagraría entre 1900 y 1904. Rosario conseguiría sus primeros títulos en 1905 y 1906. Finalmente llegaría el turno de Belgrano, campeón en 1907. Recién para 1911 y 1912 un club que no estaba entre los fundadores lograría ubicarse en el selecto grupo de los campeones: Gimnasia y Esgrima.
+            </div>
+            <div class="historiaUrba">
+                El impacto de la primera guerra mundial (1914-1918) afectó a los clubes conformados por jugadores ingleses y, en 1916, el torneo no pudo ser disputado por falta de equipos (muchos jugadores partieron hacia Europa a disputar la guerra y nunca más regresaron). Para 1917 otro de los clubes que luego marcaría gran parte de la historia del rugby argentino, CASI, lograría su primer título, a partir del cual extendería su dominio por más de una década. Tras la interrupción del torneo en 1919 también por efecto de la guerra, el CASI sería dominador casi absoluto de la escena del rugby con 13 títulos obtenidos entre 1917 y 1930 (1921 compartido con Belgrano), en forma consecutiva.
+            </div>
+            <div class="historiaUrba">
+                En la década del 30 las cosas estarían más repartidas con títulos para clubes como CUBA, Gimnasia y Esgrima, Old Georgians (en tres oportunidades consecutivas) y Olivos. Entre las décadas del 40 y el 70 las consagraciones estarían repartidas entre CUBA (13 títulos), CASI (11),  Belgrano (4), SIC (3), Pucará (2) Buenos Aires (2) y Obras Sanitarias. Para las décadas del 70 y 80, la supremacía del CASI y el SIC sería abrumadora. El SIC ganaría en ese período 13 títulos (dos tetracampeonatos, un tricampeonato y un bicampeonato) y el CASI 6 (un tricampeonato y un bicampeonato), sumándose Banco Nación, en 1986, que compartió título con el SIC.
+            </div>
+            <div class="historiaUrba">
+                Entre 1989 y 1992 habría un gran momento de Alumni con cuatro títulos consecutivos y, a partir de 1993, los torneos comienzan a ser más parejos con campeonatos para La Plata (1995), Rosario e Hindú (1996).
+                Es allí donde comienza una nueva etapa para el rugby de Buenos Aires. La particularidad de la situación desembocaría, a fines de 1995, con el nacimiento oficial de la Unión de Rugby de Buenos Aires como resultado de la reorganización de la entidad nacional.
+                Desde 2000 a la fecha el conjunto con mayor predominio en los torneos de la URBA fue el conjunto de Don Torcuato que logró un tetracampeonato (2006-2009) y un bicampeonato (2014-2015). Desde 2016 a la fecha no hubo predominio de ningún equipo y se repartieron los campeones entre cinco instituciones diferentes (CUBA, Alumni, Hindú, SIC y Belgrano)
+            </div>
+        </p>
+        <!--Fotos de los últimos campeones del torneo del Top 12-->
+        <h2>ÚLTIMOS CAMPEONES DE LA URBA</h2>
+        <div class = "campeonesUrba">
+            <img class ="fotosUrba" src="../fotos/Hindu-campeon.avif" alt="Hindu Campeon">
+            <img class ="fotosUrba" src="../fotos/Urba-campeonato.webp" alt="Sic Campeon">
+            <img class ="fotosUrba" src="../fotos/cuba-campeon.webp" alt="Cuba Campeon">
+            <img class ="fotosUrba" src="../fotos/Alumni-campeon.webp" alt="Alumni Campeon">
+    </main>
+    <footer class="footer">
+        <!--Footer-->
+        <h3>Contactanos al 011******  <img class = "logoRedes" src="../fotos/wsp.webp" alt="wsp"> </h3>
+        <h3>O podés enviándonos un mail a urbanizados@hotmail.com</h3>
+        <h3>Seguinos en nuestras redes sociales:
+            <div class ="redesSociales">
+                <img class="logoRedes" src="../fotos/tw.webp" alt="Twitter"> <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <img class="logoRedes" src="../fotos/face.webp" alt="Facebook"> <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <img class="logoRedes" src="../fotos/ig.webp" alt="Instagram"> <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <img class="logoRedes" src="../fotos/yt.webp" alt="YouTube"> <a href="https://www.youtube.com" target="_blank">Youtube</a>
+            </div>
+        </h3>
+        <nav class="navFooter">
+			<ul>
+				<li> <a href="../index.html">Home</a></li>
+				<li> <a href="./nosotros.html">Nosotros</a></li>
+				<li> <a href="./noticias.html">Noticias</a></li>
+                <li> <a href="./urba.html">URBA</a></li>
+                <li> <a href="./productos.html">Productos</a></li>
+                <li> <a href="./contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+        <div>
+            <a href="../index.html">
+                <img class="logo" src="../fotos/Logo-2021-3.webp" alt="homeLogo">
+            </a> 
+        </div>
+    </footer>
+</body>
+</html>

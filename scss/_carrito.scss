@@ -1,0 +1,151 @@
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px $colorSombra;
+  text-align: center;
+  display: inline-block;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px $colorSombra;
+  }
+}
+
+button.accion {
+  background-color: $color-accion;
+  color: white;
+
+  &:hover {
+    background-color: $color-accion-hover;
+  }
+
+  &:active {
+    background-color: $color-accion-active;
+  }
+}
+
+button.sumar-cantidad {
+  background-color: $color-eliminar;
+  color: white;
+
+  &:hover {
+    background-color: $color-eliminar-hover;
+  }
+
+  &:active {
+    background-color: $color-eliminar-active;
+  }
+}
+
+button.eliminar {
+  background-color: $color-eliminar;
+  color: white;
+
+  &:hover {
+    background-color: $color-eliminar-hover;
+  }
+
+  &:active {
+    background-color: $color-eliminar-active;
+  }
+}
+
+button.eliminar-todo {
+  background-color: $color-eliminar;
+  color: white;
+
+  &:hover {
+    background-color: $color-eliminar-hover;
+  }
+
+  &:active {
+    background-color: $color-eliminar-active;
+  }
+}
+
+button.vaciar-carrito {
+  background-color: $color-vaciar;
+  color: white;
+
+  &:hover {
+    background-color: $color-vaciar-hover;
+  }
+
+  &:active {
+    background-color: $color-vaciar-active;
+  }
+}
+
+.producto-en-carrito {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: $bgColorProducto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px $colorSombra;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px $colorSombra;
+  }
+  h3{
+    color: $textCarrito;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  span{
+    color: $textCarrito;
+    display: block;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  img.producto-imagen {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+}
+
+.total-carrito {
+  background-color: $textCarrito;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px $colorSombra;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px $colorSombra;
+  }
+}
+.total-producto-carrito{
+  margin: 10px;
+  color: $fondo-talle;
+  font-weight: 600;
+}
