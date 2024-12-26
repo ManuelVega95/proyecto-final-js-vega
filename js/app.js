@@ -3,7 +3,7 @@ import { agregarAlCarrito, mostrarCarrito } from './carrito.js';
 
 const cargarProductos = async () => {
     try {
-        const response = await fetch('/productos.json');
+        const response = await fetch('../productos.json');
         if (!response.ok) {
             throw new Error('Error al cargar los productos');
         }
