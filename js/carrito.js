@@ -233,7 +233,7 @@ if (confirmarCompra) {
         const carritoStorage = JSON.parse(localStorage.getItem("carrito")) || [];
 
         if (carritoStorage.length > 0) {
-            window.location.href = "/pages/compra.html";
+            window.location.href = "pages/compra.html";
         } else {
             Swal.fire({
                 icon: 'info',
