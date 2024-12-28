@@ -45,13 +45,21 @@ const mostrarVenta = (productos, metodoPago, cuotas) => {
     `;
     contenedorVenta.innerHTML += totalOriginalHTML;
 
-    // Se aclara la cantidad de cuotas a pagar
-    const cuotasHTML = `
-    <div class="aclaracion-pago">
-        <p><strong>Cuotas sin interés:</strong> ${cuotas} cuota(s)</p>
-    </div>
-    `;
-    contenedorVenta.innerHTML += cuotasHTML;
+    // Se aclara la cantidad de cuotas si se paga con tarjeta
+    if (metodoPago === "tarjeta") {
+      const cuotasHTML = ` 
+      <div class="aclaracion-pago">
+          <p><strong>Cuotas sin interés:</strong> ${cuotas} cuota(s)</p>
+      </div>`;
+      contenedorVenta.innerHTML += cuotasHTML;
+  } else {
+      // Si el pago es en efectivo, no se muestran
+      const cuotasHTML = `
+      <div class="aclaracion-pago">
+          <p><strong>Pago en efectivo</strong></p>
+      </div>`;
+      contenedorVenta.innerHTML += cuotasHTML;
+  }
 
     // Se aclara el aumento del 5% si se paga con tarjeta
     const aclaracionHTML = `

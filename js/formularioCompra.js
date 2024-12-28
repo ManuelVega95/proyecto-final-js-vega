@@ -18,11 +18,11 @@ document.getElementById("formCompra").addEventListener("submit", function (event
         const telefono = document.getElementById("telefono").value;
         const email = document.getElementById("email").value;
         const metodoPago = document.getElementById("metodoPago").value;
-        const numeroTarjeta = document.getElementById("numeroTarjeta").value;
-        const cuotas = document.getElementById("cuotas").value;
+        const numeroTarjeta = metodoPago === "tarjeta" ? document.getElementById("numeroTarjeta").value : "";
+        const cuotas = metodoPago === "tarjeta" ? document.getElementById("cuotas").value : "0";
         const terminos = document.getElementById("terminos").checked;
 
-        if (!nombre || !apellido || !telefono || !email || !metodoPago || !numeroTarjeta|| !cuotas) {
+        if (!nombre || !apellido || !telefono || !email || (metodoPago === "tarjeta" && (!numeroTarjeta || !cuotas))) {
             Swal.fire({ // si faltan alguno de estos datos
                 icon: 'warning',
                 title: 'Campos incompletos',
@@ -50,19 +50,26 @@ document.getElementById("formCompra").addEventListener("submit", function (event
         let pagoTarjeta = "";
         if (metodoPago === "tarjeta") {
             total *= 1.05;
-            pagoTarjeta = "\nEste monto incluye un 5% adicional por pago con tarjeta";
+            pagoTarjeta = `\nEste monto incluye un 5% adicional por pago con tarjeta, en ${cuotas} cuota(s) sin interés`;
         }
-
+        
         localStorage.setItem("metodoPago", metodoPago);
         localStorage.setItem("cuotas", cuotas);
         localStorage.setItem("venta", JSON.stringify(carrito));
 
+        let mensaje = `¡Muchas gracias por tu compra, ${nombre}! 
+                       Total a pagar: $${total.toLocaleString('es-AR')}${pagoTarjeta}. 
+                       Te enviaremos el detalle de la compra al email: ${email}.`;
+
+        if (metodoPago === "efectivo") { // Para que el mensaje varíe dependiendo de si uno compra con efectivo
+            mensaje = `¡Muchas gracias por tu compra, ${nombre}!
+                       Total a pagar: $${total.toLocaleString('es-AR')}.
+                       Te enviaremos el detalle de la compra al email: ${email}.`;
+        }
         Swal.fire({
             icon: 'success',
             title: 'Compra Confirmada',
-            text: `¡Muchas gracias por tu compra, ${nombre}! 
-                   Total a pagar: $${total.toLocaleString('es-AR')}${pagoTarjeta}, en ${cuotas} cuota(s) sin interés.
-                   Te enviaremos el detalle de la compra al email: ${email}.`,
+            text: mensaje,
         }).then(() => {
             localStorage.removeItem("carrito");
             localStorage.setItem("venta", JSON.stringify(carrito));
