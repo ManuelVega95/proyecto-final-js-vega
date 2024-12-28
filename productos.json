@@ -86,5 +86,13 @@
     "precio": 34900,
     "imagen": "../fotos/Tee-rugby.png",
     "talles": ["XS", "S", "M", "L", "XL"]
+  },
+  {
+    "id": 12,
+    "nombre": "Campera de Los Pumas 2024",
+    "descripcion": "La última campera del seleccionado argentino de rugby",
+    "precio": 169000,
+    "imagen": "../fotos/Campera-de-Los-Pumas.jpg",
+    "talles": ["XS", "S", "M", "L", "XL"]
   }
 ]
