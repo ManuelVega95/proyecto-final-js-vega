@@ -1,5 +1,3 @@
-let carrito = [];
-
 // Agregar los productos al carrito
 export const agregarAlCarrito = (idProducto, talleSeleccionado, productos) => {
   try {

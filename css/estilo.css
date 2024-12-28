@@ -145,7 +145,8 @@ header .top .logo { /* logo de la página, que al apretarlo te lleva al inicio *
   }
 }
 header .navHeader {
-  height: 130px;
+  height: 150px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -193,14 +194,14 @@ header .navHeader .menu_hamburguesa {
   display: none;
 }
 header .navHeader .menu_hamburguesa:checked + .ul_links {
-  height: 100px;
+  height: 200px;
 }
 header .navHeader .ul_links {
   width: 100%;
   position: absolute;
   top: auto;
   left: 0;
-  height: 100px;
+  height: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -852,8 +853,9 @@ header .logo-carrito {
     width: 100%;
     height: auto;
     margin: 10px 0;
-    font-size: 12px;
+    font-size: 10px;
     padding: 15px;
+    justify-content: center;
   }
   .main .cardProductosCentrados .card__productos {
     font-size: 16px;
@@ -870,17 +872,17 @@ header .logo-carrito {
 }
 @media (max-width: 768px) {
   .main .cardProductosCentrados .card {
-    width: 45%;
-    margin: 10px;
+    width: 70%;
+    margin: 5px;
   }
   .main .cardProductosCentrados .card__productos {
-    font-size: 18px;
-  }
-  .main .cardProductosCentrados .card__description {
     font-size: 15px;
   }
+  .main .cardProductosCentrados .card__description {
+    font-size: 12px;
+  }
   .main .cardProductosCentrados .card__img {
-    width: 160px;
+    width: 140px;
     padding: 12px;
   }
 }
@@ -1387,7 +1389,7 @@ button.vaciar-carrito:active {
     margin-bottom: 10px;
   }
   .total-carrito, .total-carrito-tarjeta {
-    font-size: 14px;
+    font-size: 16px;
     padding: 12px;
   }
 }
@@ -1410,7 +1412,7 @@ button.vaciar-carrito:active {
     width: 70px;
   }
   .total-carrito, .total-carrito-tarjeta {
-    font-size: 14px;
+    font-size: 18px;
     padding: 14px;
   }
 }
@@ -1431,8 +1433,8 @@ button.vaciar-carrito:active {
     font-size: 18px;
   }
   .total-carrito, .total-carrito-tarjeta {
-    font-size: 15px;
-    padding: 15px;
+    font-size: 20px;
+    padding: 16px;
   }
 }
 form {
@@ -1462,6 +1464,7 @@ input[type=text],
 input[type=email],
 input[type=direccion],
 input[type=terminos],
+input[type=tel],
 select {
   width: 100%;
   padding: 1rem;
@@ -1476,6 +1479,7 @@ input[type=text]:focus,
 input[type=email]:focus,
 input[type=direccion]:focus,
 input[type=terminos]:focus,
+input[type=tel]:focus,
 select:focus {
   border-color: #6c63ff;
   outline: none;

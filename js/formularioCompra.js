@@ -9,18 +9,43 @@ document.getElementById("metodoPago").addEventListener("change", function() {
     }
 });
 
+// Función para formatear el número de tarjeta
+function formatCardNumber(cardNumber) {
+    let digits = cardNumber.replace(/\D/g, '');
+    if (digits.length > 16) { // V
+        digits = digits.substring(0, 16);
+    }
+    // Agregar un espacio después de cada 4 dígitos para la tarjeta.
+    return digits.replace(/(\d{4})(?=\d)/g, '$1 ').trim();
+}
+// Función para validar sólo números en el teléfono
+function validatePhoneNumber(phoneNumber) {
+    return phoneNumber.replace(/\D/g, '');
+}
+
+// Evento para formatear el número de tarjeta mientras se escribe
+document.getElementById("numeroTarjeta").addEventListener("input", function(event) {
+    this.value = formatCardNumber(this.value);
+});
+
+// Asegurarse de que SÓLO se ingresen números en el teléfono
+document.getElementById("telefono").addEventListener("input", function(event) {
+    this.value = validatePhoneNumber(this.value); // Elimina cualquier cosa que no sea un número
+});
 
 document.getElementById("formCompra").addEventListener("submit", function (event) { 
     event.preventDefault();
-    try {// Todos los puntos son obligatorios, a excepción de la dirección
+    try {// Todos los puntos son obligatorios, a excepción de la dirección (Se simula como si fuera una compra que se retira en el negocio únicamente, sin envío)
         const nombre = document.getElementById("nombre").value;
         const apellido = document.getElementById("apellido").value;
-        const telefono = document.getElementById("telefono").value;
+        let telefono = document.getElementById("telefono").value;
         const email = document.getElementById("email").value;
         const metodoPago = document.getElementById("metodoPago").value;
-        const numeroTarjeta = metodoPago === "tarjeta" ? document.getElementById("numeroTarjeta").value : "";
+        let numeroTarjeta = metodoPago === "tarjeta" ? document.getElementById("numeroTarjeta").value : "";
         const cuotas = metodoPago === "tarjeta" ? document.getElementById("cuotas").value : "0";
         const terminos = document.getElementById("terminos").checked;
+
+        telefono = validatePhoneNumber(telefono); // Necesito que el teléfono SÓLO tenga números
 
         if (!nombre || !apellido || !telefono || !email || (metodoPago === "tarjeta" && (!numeroTarjeta || !cuotas))) {
             Swal.fire({ // si faltan alguno de estos datos
@@ -35,6 +60,21 @@ document.getElementById("formCompra").addEventListener("submit", function (event
                 icon: 'warning',
                 title: 'Campos incompletos',
                 text: 'Por favor, aceptá los términos y condiciones para continuar con tu compra.',
+            });
+            return;
+        }
+
+        // Formatear el número de tarjeta si es necesario
+        if (metodoPago === "tarjeta") {
+            numeroTarjeta = formatCardNumber(numeroTarjeta);
+        }
+
+        // Se muestra el error en caso de que el número de tarjeta tenga menos de 16 dígitos
+        if (metodoPago === "tarjeta" && numeroTarjeta.replace(/\D/g, '').length !== 16) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Número de tarjeta inválido',
+                text: 'El número de tarjeta debe tener exactamente 16 dígitos.',
             });
             return;
         }

@@ -29,7 +29,8 @@ header{
     }
     /*Barra de navegación principal con menú hamburguesa en responsive*/
     .navHeader{
-        height: 130px;
+        height: 150px;
+        padding: 10px 20px;
         display: flex;
         justify-content: space-between;
         list-style: none;
@@ -70,14 +71,14 @@ header{
             display: none;
         }
         .menu_hamburguesa:checked + .ul_links{
-            height: 100px;
+            height: 200px;
         }
         .ul_links{
             width: 100%;
             position: absolute; 
             top: auto;
             left: 0;
-            height: 100px;
+            height: 0;
             display: flex;
             justify-content: center;
             align-items: center;

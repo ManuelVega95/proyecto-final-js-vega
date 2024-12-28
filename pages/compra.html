@@ -23,7 +23,7 @@
             <input type="text" id="apellido" placeholder="Ingresá tu apellido" name="apellido">
 
             <label for="telefono">*Teléfono</label>
-            <input type="text" id="telefono" placeholder="Ingresá tu número de teléfono" name="telefono">
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingresá tu número de teléfono" pattern="\d+" maxlength="15">
 
             <label for="email">*Email</label>
             <input type="email" id="email" placeholder="Ingresá tu email" name="email">
@@ -39,7 +39,7 @@
 
             <div id="formPagoTarjeta" style="display: none;">
                 <label for="numeroTarjeta">*Número de tarjeta:</label>
-                <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ingrese el número de tarjeta" />
+                <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="1234 5678 9000 0000" maxlength="19"/>
             
                 <label for="cuotas">*Número de cuotas (sin interés):</label>
                 <select id="cuotas" name="cuotas">
@@ -47,6 +47,7 @@
                     <option value="3">3 cuotas</option>
                     <option value="6">6 cuotas</option>
                     <option value="12">12 cuotas</option>
+                    <option value="24">24 cuotas</option>
                 </select>
             </div>
 
