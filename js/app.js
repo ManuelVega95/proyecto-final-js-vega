@@ -1,6 +1,7 @@
-import { Producto } from './productos.js';
-import { agregarAlCarrito, mostrarCarrito } from './carrito.js';
+import { Producto } from './productos.js'; // importamos la clase Producto
+import { agregarAlCarrito, mostrarCarrito } from './carrito.js'; // Traemos desde carrito, las funciones para agregar al carrito y mostrar el carrito
 
+// Traer los productos desde JSON
 const cargarProductos = async () => {
     try {
         const response = await fetch('../productos.json');
@@ -15,18 +16,19 @@ const cargarProductos = async () => {
             if (!item.id || !item.nombre || !item.precio || !item.imagen) {
                 throw new Error('Faltan datos en los productos');
             }
-            return new Producto(item.id, item.nombre, item.descripcion, item.precio, item.imagen);
+            return new Producto(item.id, item.nombre, item.descripcion, item.precio, item.imagen, item.talles);
         });
         mostrarProductos(productos);
     } catch (error) {
         Swal.fire({
             icon: 'error',
             title: 'Surgió un problema',
-            text: `Error al cargar los productos: ${error.message}` // más allá de que durante la clase se explicó que el cartel debe ser atractivo para el usuario, este es un mensaje más para el programador, por eso lo mantengo acá y en el resto de los códigos que son similares. 
+            text: `Error al cargar los productos: ${error.message}` // más allá de que durante la clase se explicó que el cartel debe ser atractivo para el usuario, este es un mensaje más para el programador, por eso lo mantengo acá y en el resto de los códigos que sean similares. 
         });
     }
 };
 
+// Mostrar los productos
 const mostrarProductos = (productos) => { 
     try {
         const contenedorProductos = document.getElementById("productos");
@@ -34,27 +36,33 @@ const mostrarProductos = (productos) => {
             return;
         }
         contenedorProductos.innerHTML = '';
-
-        productos.forEach(producto => {
-            const tallesHTML = (producto.talles || ["S", "M", "L"]).map(talle => {
+        if (!Array.isArray(productos) || productos.length === 0) {
+            return;
+        }
+        productos.forEach(({ nombre = "", imagen = "", precio = 0, id = 0, talles = [] }) => {
+            if (!nombre || !imagen || !precio || !id || !Array.isArray(talles)) {
+                return;
+            }
+            const tallesHTML = talles.map(talle => {
                 return `<option value="${talle}">${talle}</option>`;
             }).join("");
 
+            // Traer las cards de los productos
             const cardHTML = `
                 <div class="card">
-                    <h2 class="card__productos">${producto.nombre.toUpperCase()}</h2>
+                    <h2 class="card__productos">${nombre.toUpperCase()}</h2>
                     <hr class="bordeCard">
                     <div class="card__cajaImagen">
-                        <img class="card__img" src="${producto.imagen}" alt="${producto.nombre}">
+                        <img class="card__img" src="${imagen}" alt="${nombre}">
                         <p class="card__description">
                             <i class="bi bi-arrow-right-circle-fill"></i> 
                             <span class="bold">PRECIO: </span>
-                            <span class="italic">$${producto.precio.toLocaleString()}</span>
+                            <span class="italic">$${precio.toLocaleString()}</span>
                         </p>
-                        <select id="talle-${producto.id}" class="talle-selector">
+                        <select id="talle-${id}" class="talle-selector">
                             ${tallesHTML}
                         </select>
-                        <button class="agregar-al-carrito" data-id="${producto.id}">
+                        <button class="agregar-al-carrito" data-id="${id}">
                             <img src="../fotos/Logo-carrito.png" alt="Agregar al carrito" class="icono-carrito"> 
                             Agregar al carrito
                         </button>
@@ -71,13 +79,15 @@ const mostrarProductos = (productos) => {
                     const idProducto = parseInt(e.target.getAttribute('data-id'));
                     const talleSeleccionado = document.getElementById(`talle-${idProducto}`).value;
                     const productoSeleccionado = productos.find(producto => producto.id === idProducto);
+                    if (!productoSeleccionado) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: `Producto no encontrado.`,
+                        });
+                        return;
+                    }
                     agregarAlCarrito(idProducto, talleSeleccionado, productos);
-
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Producto agregado',
-                        text: `Agregaste "${productoSeleccionado.nombre} (${talleSeleccionado})" al carrito.`,
-                    });
                 } catch (error) {
                     Swal.fire({
                         icon: 'error',
@@ -87,6 +97,7 @@ const mostrarProductos = (productos) => {
                 }
             });
         });
+
     } catch (error) {
         Swal.fire({
             icon: 'error',
@@ -108,7 +119,7 @@ const generarId = (productos) => {
         });
     }
 };
-
+// Función para crear productos aunque no está en uso
 const crearProducto = (producto = "", descripcion = "", precio = 0, imagen = "", talles = [], productos) => {
     try {
         const id = generarId(productos);
@@ -129,9 +140,7 @@ const crearProducto = (producto = "", descripcion = "", precio = 0, imagen = "",
     }
 };
 
-window.onload = async () => {
+window.onload = async () => { // Traer los productos y el carrito a la página
     cargarProductos();
-    if (window.location.pathname.includes("carrito.html")) {
-        mostrarCarrito();
-    }
+    mostrarCarrito();
 };

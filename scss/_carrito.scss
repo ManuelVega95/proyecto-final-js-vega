@@ -11,15 +11,12 @@ button {
   box-shadow: 0 4px 6px $colorSombra;
   text-align: center;
   display: inline-block;
-
   &:focus {
     outline: none;
   }
-
   &:hover {
     transform: translateY(-2px);
   }
-
   &:active {
     transform: translateY(2px);
     box-shadow: 0 2px 4px $colorSombra;
@@ -29,11 +26,9 @@ button {
 button.accion {
   background-color: $color-accion;
   color: white;
-
   &:hover {
     background-color: $color-accion-hover;
   }
-
   &:active {
     background-color: $color-accion-active;
   }
@@ -42,11 +37,9 @@ button.accion {
 button.sumar-cantidad {
   background-color: $color-eliminar;
   color: white;
-
   &:hover {
     background-color: $color-eliminar-hover;
   }
-
   &:active {
     background-color: $color-eliminar-active;
   }
@@ -55,11 +48,9 @@ button.sumar-cantidad {
 button.eliminar {
   background-color: $color-eliminar;
   color: white;
-
   &:hover {
     background-color: $color-eliminar-hover;
   }
-
   &:active {
     background-color: $color-eliminar-active;
   }
@@ -68,11 +59,9 @@ button.eliminar {
 button.eliminar-todo {
   background-color: $color-eliminar;
   color: white;
-
   &:hover {
     background-color: $color-eliminar-hover;
   }
-
   &:active {
     background-color: $color-eliminar-active;
   }
@@ -81,11 +70,9 @@ button.eliminar-todo {
 button.vaciar-carrito {
   background-color: $color-vaciar;
   color: white;
-
   &:hover {
     background-color: $color-vaciar-hover;
   }
-
   &:active {
     background-color: $color-vaciar-active;
   }
@@ -128,7 +115,7 @@ button.vaciar-carrito {
 
 .total-carrito {
   background-color: $textCarrito;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   text-align: right;
   margin-top: 20px;
@@ -138,14 +125,105 @@ button.vaciar-carrito {
   text-transform: uppercase;
   box-shadow: 0 4px 10px $colorSombra;
   transition: all 0.3s ease;
-
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 14px $colorSombra;
   }
 }
+
+.total-carrito-tarjeta{
+  background-color: $colorCarritoTarjeta;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+  border-radius: 12px;
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px $colorSombra;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px $colorSombra;
+  }
+}
+
 .total-producto-carrito{
   margin: 10px;
   color: $fondo-talle;
   font-weight: 600;
+}
+
+// Responsive para el carrito
+
+@media (max-width: 600px) {
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .producto-en-carrito {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .producto-en-carrito h3 {
+    font-size: 18px;
+  }
+  .producto-en-carrito span {
+    font-size: 12px;
+  }
+  img.producto-imagen {
+    width: 60px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .total-carrito, .total-carrito-tarjeta {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  button {
+    padding: 10px 22px;
+    font-size: 17px;
+  }
+  .producto-en-carrito {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .producto-en-carrito h3 {
+    font-size: 19px;
+  }
+  .producto-en-carrito span {
+    font-size: 13px;
+  }
+  img.producto-imagen {
+    width: 70px;
+  }
+  .total-carrito, .total-carrito-tarjeta {
+    font-size: 14px;
+    padding: 14px;
+  }
+}
+
+@media (min-width: 769px) {
+  .producto-en-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .producto-en-carrito h3 {
+    font-size: 20px;
+  }
+  .producto-en-carrito span {
+    font-size: 14px;
+  }
+  button {
+    padding: 12px 24px;
+    font-size: 18px;
+  }
+  .total-carrito, .total-carrito-tarjeta {
+    font-size: 15px;
+    padding: 15px;
+  }
 }

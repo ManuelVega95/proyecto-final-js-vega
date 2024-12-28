@@ -5,7 +5,7 @@
     "descripcion": "Camiseta oficial de la selección nacional de rugby.",
     "precio": 125000,
     "imagen": "../fotos/Camiseta-pumas-2024-2.png",
-    "talles": ["S", "M", "L"]
+    "talles": ["XS", "S", "M", "L", "XL"]
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "descripcion": "Edición especial Granaderos de Los Pumas.",
     "precio": 120000,
     "imagen": "../fotos/Camiseta-Pumas-Granaderos.jpg",
-    "talles": ["S", "M", "L"]
+    "talles": ["XS", "S", "M", "L", "XL"]
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "descripcion": "Short oficial de la selección nacional de rugby.",
     "precio": 69000,
     "imagen": "../fotos/Short-Pumas.jpg",
-    "talles": ["S", "M", "L"]
+    "talles": ["XS", "S", "M", "L", "XL"]
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "descripcion": "Short alternativo de la selección nacional de rugby.",
     "precio": 69000,
     "imagen": "../fotos/Short-Pumas-2.jpg",
-    "talles": ["S", "M", "L"]
+    "talles": ["XS", "S", "M", "L", "XL"]
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "descripcion": "Pelota oficial para partidos de rugby URBA 2024.",
     "precio": 105000,
     "imagen": "../fotos/URBA-pelota.jpg",
-    "talles": ["S", "M", "L"]
+    "talles": ["N°1", "N°3", "N°5"]
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "descripcion": "Botines de rugby originales, ideales para todo tipo de terreno.",
     "precio": 180000,
     "imagen": "../fotos/Botines-rugby-adidas-negros.jpg",
-    "talles": ["S", "M", "L"]
+    "talles": ["32", "34", "36", "38", "40", "42", "44"]
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "descripcion": "Botines de rugby celestes, cómodos y duraderos.",
     "precio": 110000,
     "imagen": "../fotos/Botines-rugby-celestes.jpg",
-    "talles": ["S", "M", "L"]
+    "talles": ["32", "34", "36", "38", "40", "42", "44"]
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "descripcion": "Protección para tu boca durante los partidos.",
     "precio": 29000,
     "imagen": "../fotos/Protector-bucal-Gilbert.png",
-    "talles": ["S", "M", "L"]
+    "talles": ["XS", "S", "M", "L", "XL"]
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "descripcion": "Medias titulares del seleccionado argentino de rugby",
     "precio": 12900,
     "imagen": "../fotos/medias-pumas-2024.jpg",
-    "talles": ["S", "M", "L"]
+    "talles": ["XS", "S", "M", "L", "XL"]
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "descripcion": "Medias alternativas del seleccionado argentino de rugby",
     "precio": 13900,
     "imagen": "../fotos/medias-pumas-2024-alternativa.jpg",
-    "talles": ["S", "M", "L"]
+    "talles": ["XS", "S", "M", "L", "XL"]
   },
   {
     "id": 11,
@@ -85,6 +85,6 @@
     "descripcion": "El mejor tee para tener una mayor precisión",
     "precio": 34900,
     "imagen": "../fotos/Tee-rugby.png",
-    "talles": ["S", "M", "L"]
+    "talles": ["XS", "S", "M", "L", "XL"]
   }
 ]

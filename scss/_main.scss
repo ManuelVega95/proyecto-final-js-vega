@@ -510,6 +510,43 @@
                 font-style: italic;
             }
         }
+    } // Responsive
+    @media (max-width: 600px) {
+        .card {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+            font-size: 12px;
+            padding: 15px;
+        }
+        .card__productos {
+            font-size: 16px;
+            padding: 5px;
+        }
+        .card__description {
+            font-size: 14px;
+            padding: 5px;
+        }
+        .card__img {
+            width: 130px;
+            padding: 10px;
+        }
+    }
+    @media (max-width: 768px) {
+        .card {
+            width: 45%;
+            margin: 10px;
+        }
+        .card__productos {
+            font-size: 18px;
+        }
+        .card__description {
+            font-size: 15px;
+        }
+        .card__img {
+            width: 160px;
+            padding: 12px;
+        }
     }
 }
 .logoCampeon{

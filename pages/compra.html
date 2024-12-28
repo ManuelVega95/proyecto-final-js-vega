@@ -13,32 +13,69 @@
     <header>
         <h1>Formulario de Compra</h1>
     </header>
-
+    <!--Formulario para la compra de los productos. Todos son obligatorios menos la dirección, que te obliga a completarlos gracias a JS, en vez del html--->
     <main>
         <form id="formCompra">
             <label for="nombre">*Nombre</label>
-            <input type="text" id="nombre" placeholder="Ingresá tu nombre" name="nombre" required>
+            <input type="text" id="nombre" placeholder="Ingresá tu nombre" name="nombre">
 
             <label for="apellido">*Apellido</label>
-            <input type="text" id="apellido" placeholder="Ingresá tu apellido" name="apellido" required>
+            <input type="text" id="apellido" placeholder="Ingresá tu apellido" name="apellido">
 
             <label for="telefono">*Teléfono</label>
-            <input type="text" id="telefono" placeholder="Ingresá tu número de teléfono" name="telefono" required>
+            <input type="text" id="telefono" placeholder="Ingresá tu número de teléfono" name="telefono">
+
+            <label for="email">*Email</label>
+            <input type="email" id="email" placeholder="Ingresá tu email" name="email">
+
+            <label for="direccion">Dirección</label>
+            <input type="direccion" id="direccion" placeholder="Ingresá tu dirección (opcional)" name="direccion">
 
             <label for="metodoPago">*Método de pago</label>
-            <select id="metodoPago" name="metodoPago" required>
+            <select id="metodoPago" name="metodoPago">
                 <option value="efectivo">Efectivo</option>
                 <option value="tarjeta">Tarjeta (+5%)</option>
             </select>
 
-            <label for="email">Email (opcional)</label>
-            <input type="email" id="email" placeholder="Ingresá tu email" name="email">
-            <p>* campos obligatorios</p>
+            <div id="formPagoTarjeta" style="display: none;">
+                <label for="numeroTarjeta">*Número de tarjeta:</label>
+                <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ingrese el número de tarjeta" />
+            
+                <label for="cuotas">*Número de cuotas (sin interés):</label>
+                <select id="cuotas" name="cuotas">
+                    <option value="1">1 cuota</option>
+                    <option value="3">3 cuotas</option>
+                    <option value="6">6 cuotas</option>
+                    <option value="12">12 cuotas</option>
+                </select>
+            </div>
 
+            <div>
+                <label for="terminos">
+                    <input type="checkbox" id="terminos" name="terminos"> Acepto los términos y condiciones
+                </label>
+            </div>
+
+            <p>* campos obligatorios</p>
             <button type="submit">Confirmar Compra</button>
         </form>
     </main>
+    <footer class="footer">
+        <!--Footer-->
+        <h3>Contactanos al 011******  <img class = "logoRedes" src="../fotos/wsp.webp" alt="wsp"> </h3>
+        <h3>O podés enviándonos un mail a urbanizados@hotmail.com</h3>
+        <h3>Seguinos en nuestras redes sociales:
+            <div class="redesSociales">
+                <img class="logoRedes" src="../fotos/tw.webp" alt="Twitter"> <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <img class="logoRedes" src="../fotos/face.webp" alt="Facebook"> <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <img class="logoRedes" src="../fotos/ig.webp" alt="Instagram"> <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <img class="logoRedes" src="../fotos/yt.webp" alt="YouTube"> <a href="https://www.youtube.com" target="_blank">Youtube</a>
+            </div>
+        </h3>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../js/formularioCompra.js"></script>
 </body>
 </html>
